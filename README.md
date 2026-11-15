@@ -2,6 +2,8 @@
 
 Exploração de triagem do crédito rural em Goiás. Cruza as glebas georreferenciadas do Sicor (Banco Central) com o CAR e com camadas públicas (água, terras indígenas, unidades de conservação, embargos do IBAMA, malha municipal) para levantar **indícios** de irregularidade.
 
+**→ Os 5 casos mais suspeitos e como conferir cada um: [suspeitas.md](suspeitas.md)**
+
 **É triagem, não acusação.** Um disparo aqui não significa fraude. A maior parte dos disparos é erro de cadastro ou ruído, e todo caso precisa de verificação manual.
 
 ## Recorte
@@ -26,7 +28,8 @@ make passo0   # ambiente, download do Sicor e das camadas, ingestão, reconhecim
 # e salve em data/raw/car/AREA_IMOVEL.zip
 make all      # cruzamentos, mapas e outputs/relatorio.md
 make revisao  # pacote KML/CSV para revisão manual no Google Earth (PE Serra Dourada)
-make padroes  # padrões mais próximos de engano: mesma terra declarada 2x; contratos fatiados no teto de R$ 500 mil
+make padroes  # padrões mais próximos de engano: mesma terra financiada 2x; gado acima da lotação; contratos fatiados no teto de R$ 500 mil
+make suspeitas  # KML dos 5 casos de suspeitas.md
 ```
 
 ## Resultados (`outputs/`)
@@ -44,7 +47,7 @@ Os números de operação e os códigos de CAR são públicos (Sicor/SICAR). Um 
 - `scripts/04`: reconhecimento (Passo 0).
 - `scripts/05`: preparação das camadas (EPSG:5880, make_valid).
 - `scripts/06–10`: os cinco cruzamentos.
-- `scripts/11–14`: mapas, relatório, pacote de revisão e padrões de engano.
+- `scripts/11–15`: mapas, relatório, pacote de revisão, padrões de engano e KML das suspeitas.
 
 ## Dados
 `data/` (cerca de 4,3 GB) não está no repositório. Ele é recriado com `make download`, e o CAR vem de download manual.
