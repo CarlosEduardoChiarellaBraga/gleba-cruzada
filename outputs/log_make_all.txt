@@ -1,0 +1,416 @@
+uv sync
+Resolved 26 packages in 17ms
+Audited 25 packages in 5ms
+.venv/bin/python -I -u scripts/01_download_sicor.py
+[ok] Atividade.csv já baixado (0.0 MB)
+[ok] CategoriaEmitente.csv já baixado (0.0 MB)
+[ok] SICOR_LISTA_IFS.csv já baixado (0.0 MB)
+[ok] Empreendimento.csv já baixado (0.7 MB)
+[ok] Finalidade.csv já baixado (0.0 MB)
+[ok] FonteRecursos.csv já baixado (0.0 MB)
+[ok] InstrumentoCredito.csv já baixado (0.0 MB)
+[ok] Modalidade.csv já baixado (0.0 MB)
+[ok] MunicipiosSicor.csv já baixado (0.2 MB)
+[ok] Produto.csv já baixado (0.0 MB)
+[ok] Programa.csv já baixado (0.0 MB)
+[ok] SituacaoOperacao.csv já baixado (0.0 MB)
+[ok] Subprogramas.csv já baixado (0.0 MB)
+[ok] manualDadosSicorCompleto.pdf já baixado (0.6 MB)
+[ok] SICOR_COMPLEMENTO_OPERACAO_BASICA.gz já baixado (453.3 MB)
+[ok] SICOR_OPERACAO_BASICA_ESTADO_2021.gz já baixado (58.2 MB)
+[ok] SICOR_OPERACAO_BASICA_ESTADO_2022.gz já baixado (60.7 MB)
+[ok] SICOR_OPERACAO_BASICA_ESTADO_2023.gz já baixado (65.0 MB)
+[ok] SICOR_OPERACAO_BASICA_ESTADO_2024.gz já baixado (68.2 MB)
+[ok] SICOR_OPERACAO_BASICA_ESTADO_2025.gz já baixado (64.8 MB)
+[ok] SICOR_PROPRIEDADES.gz já baixado (500.0 MB)
+[ok] sicor_glebas_wkt_2021.gz já baixado (205.5 MB)
+[ok] sicor_glebas_wkt_2022.gz já baixado (233.8 MB)
+[ok] sicor_glebas_wkt_2023.gz já baixado (271.4 MB)
+[ok] sicor_glebas_wkt_2024.gz já baixado (281.0 MB)
+[ok] sicor_glebas_wkt_2025.gz já baixado (266.9 MB)
+download Sicor concluído
+.venv/bin/python -I -u scripts/02_download_camadas.py
+== ibge
+[ok] GO_Municipios_2024.zip já baixado (17.2 MB)
+== funai
+[ok] tis_poligonais_go.geojson já baixado
+== cnuc
+[baixado] shp_cnuc_2025_08.zip 45.9 MB em 81s
+== ibama
+[ok] termo_de_embargo.csv já baixado (213.9 MB)
+== ana
+[ok] massa_dagua_go.geojson já baixado
+.venv/bin/python -I -u scripts/03_ingest_sicor.py
+[     0s] dim_empreendimento: 3318 códigos (0 duplicados)
+[     7s] op_raw (GO, arquivos [2021, 2022, 2023, 2024, 2025]): 306,307 linhas
+[     7s] operacoes GO (todas finalidades/datas dos arquivos) — distribuição:
+  safra       finalidade     n
+2020/21  Comercialização   517
+2020/21          Custeio 19401
+2020/21 Industrialização    25
+2020/21     Investimento 10223
+2021/22  Comercialização  1404
+2021/22          Custeio 39158
+2021/22 Industrialização    49
+2021/22     Investimento 21170
+2022/23  Comercialização  1596
+2022/23          Custeio 43956
+2022/23 Industrialização    56
+2022/23     Investimento 16919
+2023/24  Comercialização  2363
+2023/24          Custeio 44946
+2023/24 Industrialização    60
+2023/24     Investimento 17915
+2024/25  Comercialização  1881
+2024/25          Custeio 38473
+2024/25 Industrialização    34
+2024/25     Investimento 17747
+2025/26  Comercialização   232
+2025/26          Custeio 17760
+2025/26 Industrialização    36
+2025/26     Investimento 10386
+[     7s] ops no recorte: 240,284 (chaves duplicadas: 0)
+[    13s] complemento casado: 105,822
+[    14s] gravado operacoes_go.parquet
+[    21s] propriedades casadas: 136,036
+[    25s]   glebas 2021: acumulado 20,114
+[    29s]   glebas 2022: acumulado 40,783
+[    33s]   glebas 2023: acumulado 62,740
+[    38s]   glebas 2024: acumulado 86,919
+[    42s]   glebas 2025: acumulado 97,077
+[    42s] glebas (texto) casadas: 97,077
+[    43s] gravado glebas_go.parquet (97,077 glebas; WKT ilegível: 0)
+.venv/bin/python -I -u scripts/04_reconhecimento.py
+# Passo 0 — Reconhecimento (Sicor × Goiás, safras 2021/22–2024/25)
+
+## 1. Arquivos do Sicor disponíveis
+
+Fonte: <https://www.bcb.gov.br/estabilidadefinanceira/tabelas-credito-rural-proagro> (microdados em `/htms/sicor/DadosBrutos/`). Famílias de arquivo publicadas:
+
+`SICOR_COMPLEMENTO_COP`, `SICOR_COMPLEMENTO_OPERACAO_BASICA`, `SICOR_COMPLEMENTO_OPERACAO_BASICA_CONTRAT`, `SICOR_COMPLEMENTO_OPERACAO_BASICA_RENEGOCIACAO`, `SICOR_COMPLEMENTO_RCP`, `SICOR_COP_BASICO`, `SICOR_GLEBAS_CONTRAT`, `SICOR_LIBERACAO_RECURSOS`, `SICOR_LISTA_ALTERACAO_FONTE`, `SICOR_LISTA_COOPERADOS`, `SICOR_LISTA_IFS`, `SICOR_LISTA_RENEGOCIACAO`, `SICOR_MUTUARIOS`, `SICOR_MUTUARIOS_CONTRAT`, `SICOR_OPERACAO_BASICA_CONTRAT`, `SICOR_OPERACAO_BASICA_ESTADO`, `SICOR_OPERACAO_BASICA_RENEGOCIACAO`, `SICOR_PARCELAS_DESEMBOLSO`, `SICOR_PARCELAS_DESEMBOLSO_CONTRAT`, `SICOR_PARCELAS_PROAGRO`, `SICOR_PROPRIEDADES`, `SICOR_PROPRIEDADES_CONTRAT`, `SICOR_RCP_BASICO`, `SICOR_RCP_GLEBAS`, `SICOR_SALDOS`, `SICOR_SUMULA_JULGAMENTO`, `sicor_desclassificacao`, `sicor_glebas_wkt`
+
+Particionados por ano (2013–2026): `SICOR_OPERACAO_BASICA_ESTADO_AAAA`, `sicor_glebas_wkt_AAAA`, `SICOR_SALDOS_AAAA`. O ano do arquivo = ano de `DT_EMISSAO` (verificado). Usados aqui: operações e glebas 2021–2025, `SICOR_PROPRIEDADES`, `SICOR_COMPLEMENTO_OPERACAO_BASICA`, `SICOR_LISTA_IFS` e dicionários (`Empreendimento`, `Programa`).
+
+### Colunas reais (cabeçalho dos arquivos baixados)
+
+- **SICOR_OPERACAO_BASICA_ESTADO_2023.gz** (47): `REF_BACEN`, `NU_ORDEM`, `CNPJ_IF`, `DT_EMISSAO`, `DT_VENCIMENTO`, `CD_INST_CREDITO`, `CD_CATEG_EMITENTE`, `CD_FONTE_RECURSO`, `CNPJ_AGENTE_INVEST`, `CD_ESTADO`, `CD_REF_BACEN_INVESTIMENTO`, `CD_TIPO_SEGURO`, `CD_EMPREENDIMENTO`, `CD_PROGRAMA`, `CD_TIPO_ENCARG_FINANC`, `CD_TIPO_IRRIGACAO`, `CD_TIPO_AGRICULTURA`, `CD_FASE_CICLO_PRODUCAO`, `CD_TIPO_CULTIVO`, `CD_TIPO_INTGR_CONSOR`, `CD_TIPO_GRAO_SEMENTE`, `VL_ALIQ_PROAGRO`, `VL_JUROS`, `VL_PRESTACAO_INVESTIMENTO`, `VL_PREV_PROD`, `VL_QUANTIDADE`, `VL_RECEITA_BRUTA_ESPERADA`, `VL_PARC_CREDITO`, `VL_REC_PROPRIO`, `VL_PERC_RISCO_STN`, `VL_PERC_RISCO_FUNDO_CONST`, `VL_REC_PROPRIO_SRV`, `VL_AREA_FINANC`, `CD_SUBPROGRAMA`, `VL_PRODUTIV_OBTIDA`, `DT_FIM_COLHEITA`, `DT_FIM_PLANTIO`, `DT_INIC_COLHEITA`, `DT_INIC_PLANTIO`, `VL_JUROS_ENC_FINAN_POSFIX`, `VL_PERC_CUSTO_EFET_TOTAL`, `CD_CONTRATO_STN`, `CD_CNPJ_CADASTRANTE`, `VL_AREA_INFORMADA`, `CD_CICLO_CULTIVAR`, `CD_TIPO_SOLO`, `PC_BONUS_CAR`
+- **sicor_glebas_wkt_2023.gz** (4): `REF_BACEN`, `NU_ORDEM`, `NU_INDICE`, `GT_GEOMETRIA`
+- **SICOR_PROPRIEDADES.gz** (6): `REF_BACEN`, `NU_ORDEM`, `CD_CNPJ_CPF`, `CD_SNCR`, `CD_CIB`, `CD_CAR`
+- **SICOR_COMPLEMENTO_OPERACAO_BASICA.gz** (6): `REF_BACEN`, `NU_ORDEM`, `REF_BACEN_EFETIVO`, `AGENCIA_IF`, `CD_IBGE_MUNICIPIO`, `NUM_CEDULA_IF`
+- **SICOR_LISTA_IFS.csv** (3): `CNPJ_IF`, `NOME_IF`, `SEGMENTO_IF`
+- **Empreendimento.csv** (15): `CODIGO`, `DATA_INICIO`, `DATA_FIM`, `FINALIDADE`, `ATIVIDADE`, `MODALIDADE`, `PRODUTO`, `VARIEDADE`, `CESTA`, `ZONEAMENTO`, `UNIDADE_MEDIDA`, `UNIDADE_MEDIDA_PREVISAO`, `CONSORCIO`, `CEDULA_MAE`, `CD_TIPO_CULTURA`
+
+Chave de operação: (`REF_BACEN`, `NU_ORDEM`); `REF_BACEN` é mascarado. Gleba: + `NU_INDICE`. Município vem só do complemento (`CD_IBGE_MUNICIPIO`). Finalidade/produto vêm do dicionário `Empreendimento` via `CD_EMPREENDIMENTO`. Segundo o manual, `VL_AREA_FINANC = VL_AREA_INFORMADA × VL_PARC_CREDITO / (VL_PARC_CREDITO + VL_REC_PROPRIO)` — a área comparável com a gleba é `VL_AREA_INFORMADA`. `CD_CNPJ_CPF` de propriedades **não** foi carregado.
+
+## 2. Tamanho do recorte
+
+| safra   | finalidade   |   operacoes |   op_bb |   pct_bb |   valor_rs_bi |   valor_bb_rs_bi |
+|:--------|:-------------|------------:|--------:|---------:|--------------:|-----------------:|
+| 2021/22 | Custeio      |      39,158 |  31,232 |     79.8 |         16.61 |            10.14 |
+| 2021/22 | Investimento |      21,170 |  15,344 |     72.5 |          9.55 |             5.29 |
+| 2022/23 | Custeio      |      43,956 |  34,150 |     77.7 |         23.19 |            14.87 |
+| 2022/23 | Investimento |      16,919 |  11,659 |     68.9 |          9.08 |             4.79 |
+| 2023/24 | Custeio      |      44,946 |  35,855 |     79.8 |         23.47 |            15.82 |
+| 2023/24 | Investimento |      17,915 |  12,718 |     71   |          8.51 |             4.39 |
+| 2024/25 | Custeio      |      38,473 |  30,887 |     80.3 |         19.9  |            13.58 |
+| 2024/25 | Investimento |      17,747 |  13,695 |     77.2 |          7.76 |             5.04 | 
+
+**Total: 240,284 operações**, R$ 118.1 bi; BB = 185,540 (77.2%); 122 instituições. Sem município no complemento: 134,462; município fora de GO (apesar de `CD_ESTADO='GO'`): 0.
+
+Maiores instituições no recorte:
+
+| instituicao                    |       n |   pct |   valor_rs_bi |
+|:-------------------------------|--------:|------:|--------------:|
+| BCO DO BRASIL S.A.             | 185,540 |  77.2 |         73.94 |
+| CAIXA ECONOMICA FEDERAL        |  11,107 |   4.6 |         11.56 |
+| BCO BRADESCO S.A.              |  10,924 |   4.5 |          7.19 |
+| CCLA SUDOESTE GOIANO           |   4,625 |   1.9 |          3.68 |
+| BANCO COOPERATIVO SICREDI      |   2,176 |   0.9 |          0.93 |
+| BCO DE LAGE LANDEN BRASIL S.A. |   1,802 |   0.7 |          0.8  |
+| BANCO SICOOB S.A.              |   1,762 |   0.7 |          0.8  |
+| BCO SANTANDER (BRASIL) S.A.    |   1,643 |   0.7 |          2.2  | 
+
+## 3. Cobertura de localização (gleba) e de CAR
+
+| grupo                 |   operacoes |   pct_com_gleba |   pct_com_poligono |   pct_so_ponto |   pct_com_car |   pct_poligono_e_car |   pct_valor_com_gleba |
+|:----------------------|------------:|----------------:|-------------------:|---------------:|--------------:|---------------------:|----------------------:|
+| TOTAL                 |     240,284 |            34.4 |               34.4 |              0 |          43.5 |                 34.4 |                  19.9 |
+| Custeio               |     166,533 |            30.1 |               30.1 |              0 |          31   |                 30.1 |                  14.8 |
+| Investimento          |      73,751 |            44   |               44   |              0 |          71.8 |                 44   |                  32.1 |
+| BB                    |     185,540 |            39.6 |               39.6 |              0 |          49.6 |                 39.6 |                  24.5 |
+| Demais                |      54,744 |            16.6 |               16.6 |              0 |          23   |                 16.6 |                  12.3 |
+| 2021/22               |      60,328 |            41.6 |               41.6 |              0 |          55.4 |                 41.6 |                  22   |
+| 2022/23               |      60,875 |            31.7 |               31.7 |              0 |          40.6 |                 31.7 |                  17   |
+| 2023/24               |      62,861 |            25.2 |               25.2 |              0 |          31.5 |                 25.2 |                  15.9 |
+| 2024/25               |      56,220 |            39.7 |               39.7 |              0 |          47.5 |                 39.6 |                  26.1 |
+| Custeio / BB          |     132,124 |            33.9 |               33.9 |              0 |          35.1 |                 33.9 |                  17   |
+| Custeio / Demais      |      34,409 |            15.4 |               15.4 |              0 |          15.4 |                 15.4 |                  10.7 |
+| Investimento / BB     |      53,416 |            53.7 |               53.7 |              0 |          85.4 |                 53.7 |                  45.4 |
+| Investimento / Demais |      20,335 |            18.6 |               18.6 |              0 |          35.9 |                 18.6 |                  15.3 | 
+
+Glebas por operação: 0: 157,732, 1: 74,203, 2: 5,432, 3–5: 2,498, 6–10: 379, >10: 40
+
+CARs distintos por operação: 0: 135,660, 1: 100,693, 2: 2,770, 3: 709, 4: 272, 5+: 180
+
+Códigos CAR informados (linhas operação×CAR): 134,851. Formato no Sicor: **sem hífens**, `UF`+`IBGE7`+`HASH32` (41 caracteres) — 100.0% seguem esse padrão; prefixo `GO`: 100.0%; município embutido no CAR = município da operação (quando há município): 98.1%.
+
+### Quem tem localização publicada? (viés de seleção)
+
+Por porte do produtor:
+
+| grupo              |   operacoes |   pct_gleba |   pct_car |   pct_municipio |
+|:-------------------|------------:|------------:|----------:|----------------:|
+| 1 pequeno produtor |      74,652 |        56.3 |      67.4 |            68   |
+| 2 médio produtor   |      80,714 |        21.9 |      23.9 |            24.1 |
+| 3 grande produtor  |      84,918 |        26.8 |      41.2 |            41.9 | 
+
+Por programa:
+
+| grupo            |   operacoes |   pct_gleba |   pct_car |   pct_municipio |
+|:-----------------|------------:|------------:|----------:|----------------:|
+| Outros programas |       7,222 |        29.1 |      87.1 |            99.3 |
+| Pronaf           |      64,047 |        61.2 |      71.9 |            72.2 |
+| Pronamp          |      40,068 |        36.5 |      36.7 |            36.8 |
+| Sem programa     |     128,947 |        20.7 |      29.1 |            29.2 | 
+
+Por valor da operação:
+
+| grupo           |   operacoes |   pct_gleba |   pct_car |   pct_municipio |
+|:----------------|------------:|------------:|----------:|----------------:|
+| a) < 50 mil     |      38,393 |        49.7 |      67.4 |            67.9 |
+| b) 50–200 mil   |      78,735 |        42.8 |      50   |            50.3 |
+| c) 200 mil–1 mi |      91,764 |        27.5 |      35.3 |            35.9 |
+| d) 1–5 mi       |      30,218 |        14.6 |      22.5 |            23.2 |
+| e) > 5 mi       |       1,174 |        10.5 |      15.9 |            17   | 
+
+Por produto (10 maiores em nº de operações):
+
+| grupo                                                                    |   operacoes |   pct_gleba |   valor_rs_bi |
+|:-------------------------------------------------------------------------|------------:|------------:|--------------:|
+| Custeio · BOVINOS                                                        |     109,491 |        34.5 |         32.48 |
+| Custeio · SOJA                                                           |      34,962 |        19.8 |         32.88 |
+| Investimento · BOVINOS                                                   |      29,571 |        74.3 |          8.72 |
+| Custeio · MILHO                                                          |      15,841 |        22.4 |         11.63 |
+| Investimento · MÁQUINAS E IMPLEMENTOS                                    |      10,198 |         0.2 |          5.29 |
+| Investimento · Terraços, Porteiras, Mata-burros, Currais, Cochos, Cercas |       8,627 |        48.8 |          1.19 |
+| Investimento · TRATOR                                                    |       5,555 |         0.2 |          3.61 |
+| Investimento · COLHEITADEIRAS, COLHEDEIRAS E ARRANCADEIRAS               |       3,608 |         0   |          4.2  |
+| Investimento · CORREÇÃO INTENSIVA DO SOLO                                |       3,175 |        65   |          3.36 |
+| Investimento · PASTAGEM                                                  |       2,334 |        75.9 |          1.22 | 
+
+Gleba, CAR e município andam juntos: operações com gleba e sem CAR = 4; com CAR e sem gleba = 22,076 (sobretudo máquinas/investimentos sem área). Toda operação com gleba tem município no complemento. O BCB não documenta o critério de publicação; o padrão observado é que a localização aparece muito mais para pequenos produtores, Pronaf, pecuária e operações de menor valor. A família de arquivos `*_CONTRAT` (glebas como lista de pontos) cobre só contratos a partir de nov/2025 — fora do recorte — e não preenche essa lacuna.
+
+## 4. Formato e qualidade das glebas
+
+- Glebas no recorte: **97,077**. Tipo WKT: `POLYGON` 97,077
+- WKT não interpretável: 0; vazias: 0; **inválidas (antes de make_valid): 0 (0.00%)**
+- Vértices por gleba: mediana 15, p05 6, p95 64; glebas com ≤ 4 vértices (triângulo/ponto degenerado): 96
+- Coordenadas em graus decimais (lon lat), com Z = 0 (descartado). Assumido SIRGAS 2000 (EPSG:4674).
+
+### Sanidade das coordenadas (centroide da gleba)
+
+| categoria                                |   glebas |   pct |
+|:-----------------------------------------|---------:|------:|
+| dentro de GO                             |   97,072 | 99.99 |
+| fora de GO (outra localização no Brasil) |        5 |  0.01 | 
+
+Das glebas dentro de GO, **99.7%** têm o centroide no município declarado da operação (prévia — o cruzamento 3 refaz isso por área e com tolerância de borda).
+
+Área: soma das glebas ÷ `VL_AREA_INFORMADA` por operação — mediana 1.003, p01 1.00, p10 1.001, p90 1.006, p99 1.43; razão entre 0,8 e 1,25 em 98.6% das 82,542 operações; fora de [0,5; 2]: 614 (prévia do cruzamento 4).
+
+Área da gleba (ha): mediana 30.0, p95 240, máx 4,968.
+
+**Leitura:** área e município batem quase perfeitamente com a gleba. Isso indica que o Sicor valida esses campos contra o polígono na entrada (ou a área é derivada dele). Consequência: os cruzamentos 3 (fora do município) e 4 (área incoerente) devem disparar pouco e funcionar mais como controle de qualidade do que como detector.
+
+Glebas com centroide fora de GO:
+
+|   ref_bacen |   nu_ordem |   nu_indice | loc_cat                                  |   cent_x |   cent_y |   area_ha |   cd_ibge_municipio |
+|------------:|-----------:|------------:|:-----------------------------------------|---------:|---------:|----------:|--------------------:|
+|   513204099 |          1 |           1 | fora de GO (outra localização no Brasil) |    -47.5 |    -17.5 |     130   |             5205109 |
+|   515242690 |          1 |           2 | fora de GO (outra localização no Brasil) |    -51.5 |    -20.6 |    1031.4 |             5204409 |
+|   514517378 |          1 |           0 | fora de GO (outra localização no Brasil) |    -46.2 |    -14.9 |     325.5 |             5220702 |
+|   516779661 |          1 |           2 | fora de GO (outra localização no Brasil) |    -46.5 |    -15   |     255.3 |             5220702 |
+|   520174228 |          1 |           0 | fora de GO (outra localização no Brasil) |    -49.5 |    -13.2 |       8.2 |             5215256 | 
+
+## 5. Amostra visual (10 operações sorteadas)
+
+![10 glebas](maps/passo0_glebas_aleatorias.png)
+
+|   n |   nu_ordem | municipio_declarado   | safra   | finalidade   | produto                    | banco   |   n_glebas |   area_calc_ha |   area_informada_ha | centroide_no_municipio   | dentro_go   |   ref_bacen |
+|----:|-----------:|:----------------------|:--------|:-------------|:---------------------------|:--------|-----------:|---------------:|--------------------:|:-------------------------|:------------|------------:|
+|   1 |          1 | Nova Glória           | 2021/22 | Investimento | BOVINOS                    | BB      |          1 |           27.1 |                27.1 | True                     | True        |   512966202 |
+|   2 |          1 | Nova Crixás           | 2022/23 | Custeio      | BOVINOS                    | BB      |          1 |          395.6 |               395   | True                     | True        |   515172973 |
+|   3 |          1 | Campinaçu             | 2021/22 | Custeio      | BOVINOS                    | BB      |          1 |           20.3 |                20.2 | True                     | True        |   513730229 |
+|   4 |          1 | Nova Crixás           | 2021/22 | Investimento | CORREÇÃO INTENSIVA DO SOLO | BB      |          2 |          164   |               163.8 | True                     | True        |   513654888 |
+|   5 |          1 | Paranaiguara          | 2022/23 | Investimento | BOVINOS                    | BB      |          1 |           93   |                92.9 | True                     | True        |   515752570 |
+|   6 |          1 | Jaraguá               | 2022/23 | Custeio      | ABACAXI                    | BB      |          1 |            2   |                 2   | True                     | True        |   515470763 |
+|   7 |          1 | Bela Vista de Goiás   | 2023/24 | Investimento | CORREÇÃO INTENSIVA DO SOLO | BB      |          3 |           78.9 |                78.6 | True                     | True        |   516925197 |
+|   8 |          1 | Campo Alegre de Goiás | 2024/25 | Investimento | BOVINOS                    | BB      |          1 |           43   |                42.8 | True                     | True        |   518842929 |
+|   9 |          1 | Porangatu             | 2024/25 | Custeio      | BOVINOS                    | BB      |          1 |           16.1 |                16   | True                     | True        |   518744713 |
+|  10 |          1 | Nova Veneza           | 2023/24 | Custeio      | TOMATE                     | BB      |          1 |            0.4 |                 0.4 | True                     | True        |   517318354 |
+
+## 6. Camadas de cruzamento — o que foi possível baixar
+
+| base                                        | status                          |   feicoes_em_GO | obs                                                                                                                        |
+|:--------------------------------------------|:--------------------------------|----------------:|:---------------------------------------------------------------------------------------------------------------------------|
+| Malha municipal (IBGE 2024)                 | ok (geoftp IBGE)                |             246 | 246 municípios                                                                                                             |
+| Terras indígenas (FUNAI)                    | ok (WFS geoserver.funai.gov.br) |               7 | Avá-Canoeiro; Carretão I; Carretão II; Karajá de Aruanã I; Karajá de Aruanã III; Parque do                                 |
+| Unidades de conservação (MMA/CNUC 2025-08)  | ok (dados.mma.gov.br)           |             166 | Proteção Integral 25; APA 44; RPPN 86; outras US 11                                                                        |
+| Áreas embargadas (IBAMA, termos de embargo) | ok (dadosabertos.ibama.gov.br)  |            4720 | 1,679 com polígono, demais só ponto; 292 cancelados; arquivo traz nome/CPF — descartados na ingestão                       |
+| Massas d'água (ANA/SNIRH)                   | ok (ArcGIS REST snirh.gov.br)   |           34257 | envelope de GO; inclui açudes pequenos. Rios como linha (BHO) não baixados: sem área, não servem ao critério >10% da gleba |
+| CAR — polígonos dos imóveis (SICAR)         | **MANUAL**                      |                 | download por estado exige navegador (página com captcha) — ver instruções abaixo                                           | 
+
+**CAR de Goiás (manual):** acesse <https://consultapublica.car.gov.br/publico/estados/downloads>, escolha **Goiás**, tema **Área do Imóvel** (shapefile `AREA_IMOVEL`), preencha o captcha/e-mail e salve o .zip em `data/raw/car/` (qualquer nome). O código do SICAR tem hífens/pontos (`GO-5218003-XXXX.XXXX...`); será normalizado para o formato do Sicor (sem separadores).
+
+mkdir -p data/raw/car/AREA_IMOVEL && unzip -o -q data/raw/car/AREA_IMOVEL.zip -d data/raw/car/AREA_IMOVEL && touch data/raw/car/AREA_IMOVEL/AREA_IMOVEL_1.shp
+.venv/bin/python -I -u scripts/05_prep_camadas.py
+[IBGE municípios GO] 246 feições; nulas/vazias 0; inválidas corrigidas 0
+[Sicor glebas] 97,077 feições; nulas/vazias 0; inválidas corrigidas 0
+op_footprint: 82,552 operações com gleba
+[SICAR área do imóvel GO] 246,211 feições; nulas/vazias 0; inválidas corrigidas 102
+  CAR: códigos repetidos (multipartes em linhas separadas): 1,351
+[FUNAI terras indígenas] 18 feições; nulas/vazias 0; inválidas corrigidas 0
+[CNUC unidades de conservação] 3,122 feições; nulas/vazias 1; inválidas corrigidas 3
+[ANA massas d'água] 34,257 feições; nulas/vazias 0; inválidas corrigidas 0
+  embargos com ponto fora da faixa plausível (descartados se sem polígono): 1,343
+[IBAMA embargos GO] 3,422 feições; nulas/vazias 0; inválidas corrigidas 0
+  embargos por tipo de geometria: {'ponto': 1743, 'poligono': 1679}
+                      camada  feicoes  nulas_ou_vazias  invalidas_corrigidas  descartadas  pct_invalidas
+          IBGE municípios GO      246                0                     0            0          0.000
+                Sicor glebas    97077                0                     0            0          0.000
+     SICAR área do imóvel GO   246211                0                   102            0          0.041
+      FUNAI terras indígenas       18                0                     0            0          0.000
+CNUC unidades de conservação     3122                1                     3            0          0.096
+           ANA massas d'água    34257                0                     0            0          0.000
+           IBAMA embargos GO     3422                0                     0            0          0.000
+.venv/bin/python -I -u scripts/06_cruz1_gleba_car.py
+operações com gleba e CAR: 82,548
+imóveis SICAR (dissolvidos): 245,362
+                                                 cruzamento  elegiveis  disparam  pct_elegiveis  bb_pct  demais_pct
+0     1. Gleba × CAR — qualquer sinal (sobrep<50% ou >5 km)      82548      7860           9.52    9.65        8.50
+1                                  1. Gleba × CAR — indício      82548      3181           3.85    3.97        2.90
+2                1. Gleba × CAR — erro de cadastro provável      82548      4064           4.92    4.99        4.37
+3                           1. Gleba × CAR — ruído provável      82548       615           0.75    0.68        1.23
+4             1. — CAR de outro município e gleba fora dele      82548        54           0.07    0.07        0.02
+5                    1. — CAR informado não existe no SICAR      82548        35           0.04    0.04        0.04
+6                    1. — gleba em CAR vizinho ao informado      82548      3975           4.82    4.88        4.31
+7                     1. — gleba em outro CAR (não vizinho)      82548      1604           1.94    2.01        1.37
+8            1. — gleba fora de qualquer CAR (<50% coberta)      82548      1577           1.91    1.96        1.53
+9   1. — sobreposição ok mas centroides > 5 km (CAR grande)      82548       615           0.75    0.68        1.23
+10               1. (contexto) CAR informado hoje cancelado      82548       570           0.69    0.62        1.28
+
+sobreposição (quantis): {0.01: 0.0, 0.05: 0.011, 0.1: 0.601, 0.25: 0.955, 0.5: 0.998}
+CAR atualizado após contrato: 0.33
+.venv/bin/python -I -u scripts/07_cruz2_dupla_area.py
+pares que se tocam na mesma safra+finalidade: 15,811
+pares com sobreposição > 50% da menor: 10,177
+                                                                                cruzamento  elegiveis  disparam  pct_elegiveis  bb_pct  demais_pct
+0                       2. Regra original: mesma safra+finalidade, >50% (qualquer produto)      82552     15906          19.27   19.12       20.46
+1                                      2. Indício (mesmo produto; exclui ciclos distintos)      82552      9426          11.42   11.65        9.56
+2                                               2. — indício forte (agrícola, mesmo ciclo)      82552        10           0.01    0.01        0.02
+3                                  2. — mesmo empreendimento simultâneo (pecuária/invest.)      82552      9256          11.21   11.51        8.80
+4                                                    2. — mesmo produto agrícola sem datas      82552       160           0.19    0.13        0.74
+5                                                       2. — indício com bancos diferentes      82552       802           0.97    0.47        5.02
+6  2. (contexto) provável legítimo (ciclos distintos, sequenciais ou empreend. diferentes)      82552      4258           5.16    5.21        4.75
+7                                                        2. (contexto) produtos diferentes      82552      3327           4.03    3.59        7.58
+
+pares por classe × bancos:
+ bancos                                                                           BB×BB  BB×Demais  Demais×Demais
+classe                                                                                                          
+indício forte: mesmo produto, mesmo ciclo                                            4          0              1
+indício: mesmo empreendimento, contratos simultâneos (pecuária/invest.)           5119        359            336
+indício: mesmo produto agrícola, sem datas                                          41         26             24
+provável legítimo: mesmo empreendimento, contratos sequenciais                      11          3              6
+provável legítimo: mesmo produto, ciclos distintos                                 221         18             71
+provável legítimo: mesmo produto, empreendimentos diferentes (pecuária/invest.)   1838        195             61
+ruído: produtos diferentes (sucessão/consórcio)                                   1321        238            284
+
+fração da menor (pares indício): {0.1: 0.851, 0.5: 1.0, 0.9: 1.0} | excesso de área: {0.1: 1.3, 0.5: 1.99, 0.9: 2.0} | mesmo CAR: 0.959
+.venv/bin/python -I -u scripts/08_cruz3_geometria.py
+operações com gleba: 82,552
+água ok
+UC ok
+embargos: pares gleba×embargo 307; válidos 28
+  glebas inteiras num município: 79,490; de borda: 3,062
+município ok
+                                                                       cruzamento  disparam  pct_elegiveis  bb_pct  demais_pct  imoveis_car  areas_distintas
+0                                      3. Geometria impossível — qualquer indício       123           0.15    0.16        0.04           91              100
+1                                                3. — água grande > 10% (indício)        27           0.03    0.04        0.01           20               23
+2                                   3. — arroz sobre várzea/água (ruído provável)         4           0.00    0.00        0.04            1                4
+3                                          3. — aquicultura sobre água (esperado)        61           0.07    0.07        0.12           45               53
+4                                       3. — açude pequeno > 10% (ruído provável)        19           0.02    0.02        0.01           15               18
+5                                             3. — terra indígena > 10% (indício)         0           0.00    0.00        0.00            0                0
+6                                       3. — UC proteção integral > 10% (indício)        63           0.08    0.08        0.03           37               47
+7                                                       3. — RPPN > 10% (indício)         4           0.00    0.01        0.00            2                4
+8                                            3. — APA > 10% (contexto, permitido)      1379           1.67    1.73        1.22          611              958
+9         3. — embargo IBAMA vigente (polígono > 10%) antes do contrato (indício)         9           0.01    0.01        0.00            7                8
+10  3. — embargo IBAMA vigente (ponto na gleba) antes do contrato (indício fraco)        18           0.02    0.02        0.00           17               16
+11                                  3. — embargo só DEPOIS do contrato (contexto)        21           0.03    0.03        0.02           11               15
+12     3. — fora do município: maior parte em vizinho (erro de cadastro provável)        51           0.06    0.07        0.02           42               45
+13                                  3. — fora do município: não vizinho (indício)         2           0.00    0.00        0.00            8                2
+14                                               3. — fora de GO (> 50% da gleba)         0           0.00    0.00        0.00            0                0
+.venv/bin/python -I -u scripts/09_cruz4_area.py
+                                                                  cruzamento  disparam  pct_elegiveis  bb_pct  demais_pct
+0  4. Área incoerente — qualquer sinal (razão <0,5 ou >2, ou área simbólica)      1286           1.56    1.62        1.08
+1                                                               4. — indício       291           0.35    0.36        0.25
+2                                             4. — erro de cadastro provável       881           1.07    1.10        0.80
+3                                                        4. — ruído provável       114           0.14    0.15        0.02
+4                                              4. — erro de unidade provável        76           0.09    0.09        0.11
+5                                4. — gleba MAIOR que a área informada (>2×)       290           0.35    0.36        0.25
+6                              4. — gleba MENOR que a área informada (<0,5×)         1           0.00    0.00        0.00
+7             4. — investimento sem área de referência (máquina/benfeitoria)       114           0.14    0.15        0.02
+8                                   4. — área informada simbólica (≤ 0,1 ha)       805           0.98    1.01        0.69
+9                                     4. (sensibilidade) razão <0,8 ou >1,25      1045           1.27    1.23        1.56
+unidades: {'alqueire paulista (2,42)': 45, 'alqueire goiano (4,84)': 36, '×10': 7, 'm²↔ha (10.000)': 1, '×100': 1}
+        banco                     produto  vl_parc_credito  vl_area_informada     area_ha        razao                               categoria
+24831  Demais                     BOVINOS        150000.00               0.15  278.810171  1858.734471  gleba MAIOR que a área informada (>2×)
+41837      BB                        SOJA        101023.36              19.41  389.059350    20.044274  gleba MAIOR que a área informada (>2×)
+34674      BB                     BOVINOS         72615.48              39.76  500.227183    12.581167  gleba MAIOR que a área informada (>2×)
+50018      BB  CORREÇÃO INTENSIVA DO SOLO         54000.00              14.14  180.200691    12.744038  gleba MAIOR que a área informada (>2×)
+10666      BB                     BOVINOS         19940.00              33.03  503.794995    15.252649  gleba MAIOR que a área informada (>2×)
+6831       BB                     BOVINOS         54639.34              36.47  401.402153    11.006366  gleba MAIOR que a área informada (>2×)
+63800      BB                     BOVINOS         70288.40               4.51   40.095740     8.890408  gleba MAIOR que a área informada (>2×)
+27541      BB  CORREÇÃO INTENSIVA DO SOLO         37500.00               2.35   20.517482     8.730843  gleba MAIOR que a área informada (>2×)
+27543      BB  CORREÇÃO INTENSIVA DO SOLO         42500.00               2.66   20.373887     7.659356  gleba MAIOR que a área informada (>2×)
+15515      BB                     BOVINOS         24590.66              16.84  141.803260     8.420621  gleba MAIOR que a área informada (>2×)
+.venv/bin/python -I -u scripts/10_cruz5_valor_ha.py
+{'ops_recorte': 240284, 'elegiveis_base': 191840, 'com_municipio': 70715, 'municipio_do_complemento': 70715, 'municipio_so_do_car': 0, 'grupos_ge20': 1039, 'grupos_mad_zero': 20, 'ops_avaliaveis': 46872}
+                                                               cruzamento  elegiveis  disparam  pct_elegiveis  bb_pct  demais_pct
+0  5. Valor por unidade > mediana + 3·MAD (R$/ha lavoura; R$/UA pecuária)      46872      5147          10.98   10.23       18.28
+1                                                            5. — indício      46872      4583           9.78    9.09       16.47
+2                                          5. — erro de cadastro provável      46872       564           1.20    1.14        1.80
+3                                                   5. — indício em R$/ha       6343       488           7.69    6.14       13.97
+4                                                   5. — indício em R$/UA      24573      2369           9.64    8.56       18.17
+5                                               5. — indício em R$/cabeça      15956      1726          10.82   10.79       12.03
+6                                 5. (sensibilidade) MAD escalado ×1,4826      46872      3728           7.95    7.47       12.69
+7                  5. (regra literal) R$/ha para tudo, inclusive pecuária      52455      7355          14.02   12.90       24.71
+                                                   avaliaveis  disparam    pct
+finalidade   produto                    metrica                               
+Custeio      BOVINOS                    R$/cabeça       15910      1974  12.41
+                                        R$/UA           15144      1521  10.04
+Investimento BOVINOS                    R$/UA            9429      1148  12.18
+Custeio      SOJA                       R$/ha            3900       314   8.05
+             MILHO                      R$/ha            1786       126   7.05
+Investimento CORREÇÃO INTENSIVA DO SOLO R$/ha             439        33   7.52
+             PASTAGEM                   R$/ha             170        24  14.12
+Custeio      SUÍNOS                     R$/cabeça          46         6  13.04
+         banco    safra  produto  vl_parc_credito  vl_area_informada  vl_quantidade    metrica    base      valor_un   mediana  vezes_mediana  n_grupo
+95850   Demais  2022/23  BOVINOS       3000000.00             131.71          134.0      R$/UA   134.0  22388.059701  1909.130      11.726839       25
+51355       BB  2024/25  BOVINOS       2998103.68             239.77          418.2      R$/UA   418.2   7169.066667   573.100      12.509277       33
+144601  Demais  2021/22  BOVINOS       3000000.00             209.94          213.0      R$/UA   213.0  14084.507042  2530.460       5.565987      145
+51954       BB  2024/25  BOVINOS       3000000.00              26.86          285.0      R$/UA   285.0  10526.315789  1959.770       5.371200       54
+51700       BB  2024/25  BOVINOS       3000000.00              47.78          285.0      R$/UA   285.0  10526.315789  1959.770       5.371200       54
+110248      BB  2024/25  BOVINOS       2750000.00              47.78          225.0      R$/UA   225.0  12222.222222  1959.770       6.236560       54
+122273  Demais  2022/23  BOVINOS       2998140.00             244.00          244.0      R$/UA   244.0  12287.459016  2779.760       4.420331       42
+159231  Demais  2022/23  BOVINOS       3000000.00              49.91          485.0  R$/cabeça   485.0   6185.567010  1747.572       3.539521       53
+82518       BB  2024/25  BOVINOS       2397762.59             338.32          194.1      R$/UA   194.1  12353.233333  1981.070       6.235637       42
+120963      BB  2022/23  BOVINOS       3000000.00             354.74         2589.0      R$/UA  2589.0   1158.748552   416.810       2.780040       35
+.venv/bin/python -I -u scripts/11_mapas.py
+mapa 1 ok
+mapa 2 ok
+mapa 3 ok
+mapa 4 ok
+mapa 5 ok
+.venv/bin/python -I -u scripts/12_relatorio.py
+relatorio.md: 83 blocos; convergência: 335 operações
+make exit: 0

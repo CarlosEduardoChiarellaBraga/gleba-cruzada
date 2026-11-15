@@ -1,0 +1,15 @@
+[     0s] dim_empreendimento: 3318 códigos (0 duplicados)
+[     7s] op_raw (GO, arquivos [2021, 2022, 2023, 2024, 2025]): 306,307 linhas
+[     8s] operacoes GO (todas finalidades/datas dos arquivos) — distribuição:
+  safra       finalidade     n
+[     8s] ops no recorte: 240,284 (chaves duplicadas: 0)
+[    15s] complemento casado: 105,822
+[    15s] gravado operacoes_go.parquet
+[    24s] propriedades casadas: 136,036
+[    28s]   glebas 2021: acumulado 20,114
+[    33s]   glebas 2022: acumulado 40,783
+[    37s]   glebas 2023: acumulado 62,740
+[    42s]   glebas 2024: acumulado 86,919
+[    48s]   glebas 2025: acumulado 97,077
+[    48s] glebas (texto) casadas: 97,077
+[    50s] gravado glebas_go.parquet (97,077 glebas; WKT ilegível: 0)

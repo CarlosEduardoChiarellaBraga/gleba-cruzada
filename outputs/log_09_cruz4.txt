@@ -1,0 +1,23 @@
+                                                                  cruzamento  disparam  pct_elegiveis  bb_pct  demais_pct
+0  4. Área incoerente — qualquer sinal (razão <0,5 ou >2, ou área simbólica)      1286           1.56    1.62        1.08
+1                                                               4. — indício       291           0.35    0.36        0.25
+2                                             4. — erro de cadastro provável       881           1.07    1.10        0.80
+3                                                        4. — ruído provável       114           0.14    0.15        0.02
+4                                              4. — erro de unidade provável        76           0.09    0.09        0.11
+5                                4. — gleba MAIOR que a área informada (>2×)       290           0.35    0.36        0.25
+6                              4. — gleba MENOR que a área informada (<0,5×)         1           0.00    0.00        0.00
+7             4. — investimento sem área de referência (máquina/benfeitoria)       114           0.14    0.15        0.02
+8                                   4. — área informada simbólica (≤ 0,1 ha)       805           0.98    1.01        0.69
+9                                     4. (sensibilidade) razão <0,8 ou >1,25      1045           1.27    1.23        1.56
+unidades: {'alqueire paulista (2,42)': 45, 'alqueire goiano (4,84)': 36, '×10': 7, 'm²↔ha (10.000)': 1, '×100': 1}
+        banco                     produto  vl_parc_credito  vl_area_informada     area_ha        razao                               categoria
+24831  Demais                     BOVINOS        150000.00               0.15  278.810171  1858.734471  gleba MAIOR que a área informada (>2×)
+41837      BB                        SOJA        101023.36              19.41  389.059350    20.044274  gleba MAIOR que a área informada (>2×)
+34674      BB                     BOVINOS         72615.48              39.76  500.227183    12.581167  gleba MAIOR que a área informada (>2×)
+50018      BB  CORREÇÃO INTENSIVA DO SOLO         54000.00              14.14  180.200691    12.744038  gleba MAIOR que a área informada (>2×)
+10666      BB                     BOVINOS         19940.00              33.03  503.794995    15.252649  gleba MAIOR que a área informada (>2×)
+6831       BB                     BOVINOS         54639.34              36.47  401.402153    11.006366  gleba MAIOR que a área informada (>2×)
+63800      BB                     BOVINOS         70288.40               4.51   40.095740     8.890408  gleba MAIOR que a área informada (>2×)
+27541      BB  CORREÇÃO INTENSIVA DO SOLO         37500.00               2.35   20.517482     8.730843  gleba MAIOR que a área informada (>2×)
+27543      BB  CORREÇÃO INTENSIVA DO SOLO         42500.00               2.66   20.373887     7.659356  gleba MAIOR que a área informada (>2×)
+15515      BB                     BOVINOS         24590.66              16.84  141.803260     8.420621  gleba MAIOR que a área informada (>2×)

@@ -25,10 +25,18 @@ make passo0   # ambiente, download do Sicor e das camadas, ingestão, reconhecim
 #   https://consultapublica.car.gov.br/publico/estados/downloads
 # e salve em data/raw/car/AREA_IMOVEL.zip
 make all      # cruzamentos, mapas e outputs/relatorio.md
-make revisao  # pacote KML/CSV para revisão manual no Google Earth
+make revisao  # pacote KML/CSV para revisão manual no Google Earth (PE Serra Dourada)
+make padroes  # padrões mais próximos de engano: mesma terra declarada 2x; contratos fatiados no teto de R$ 500 mil
 ```
 
-Os resultados vão para `outputs/`, que fica fora do repositório de propósito: eles contêm números de operação, códigos de CAR e coordenadas.
+## Resultados (`outputs/`)
+- `relatorio.md`: relatório completo (recorte, método, os cinco cruzamentos, BB × demais, conclusão).
+- `reconhecimento.md`: Passo 0 (cobertura e qualidade dos dados).
+- `maps/`: mapas.
+- `cruzamentos/`: tabelas por cruzamento e `convergencia.csv` (operações com indício em 2+ cruzamentos).
+- `revisao/`: pacotes de revisão manual (KML para o Google Earth e CSVs com links).
+
+Os números de operação e os códigos de CAR são públicos (Sicor/SICAR). Um indício **não** é prova de irregularidade.
 
 ## Estrutura
 - `scripts/01–02`: downloads.
@@ -36,7 +44,10 @@ Os resultados vão para `outputs/`, que fica fora do repositório de propósito:
 - `scripts/04`: reconhecimento (Passo 0).
 - `scripts/05`: preparação das camadas (EPSG:5880, make_valid).
 - `scripts/06–10`: os cinco cruzamentos.
-- `scripts/11–13`: mapas, relatório e pacote de revisão.
+- `scripts/11–14`: mapas, relatório, pacote de revisão e padrões de engano.
+
+## Dados
+`data/` (cerca de 4,3 GB) não está no repositório. Ele é recriado com `make download`, e o CAR vem de download manual.
 
 ## Fontes
 Todos os dados são públicos:

@@ -1,0 +1,9 @@
+cruzamento,elegiveis,disparam,pct_elegiveis,pct_recorte,valor_disparos_rs_mi,bb_elegiveis,bb_disparam,bb_pct,demais_elegiveis,demais_disparam,demais_pct,ops_recorte,elegiveis_base,com_municipio,municipio_do_complemento,municipio_so_do_car,grupos_ge20,grupos_mad_zero,ops_avaliaveis
+5. Valor por unidade > mediana + 3·MAD (R$/ha lavoura; R$/UA pecuária),46872,5147,10.98,2.142,1423.5,42489,4346,10.23,4383,801,18.28,240284.0,191840.0,70715.0,70715.0,0.0,1039.0,20.0,46872.0
+5. — indício,46872,4583,9.78,1.907,1265.0,42489,3861,9.09,4383,722,16.47,,,,,,,,
+5. — erro de cadastro provável,46872,564,1.2,0.235,158.5,42489,485,1.14,4383,79,1.8,,,,,,,,
+5. — indício em R$/ha,6343,488,7.69,0.203,326.4,5083,312,6.14,1260,176,13.97,,,,,,,,
+5. — indício em R$/UA,24573,2369,9.64,0.986,718.0,21799,1865,8.56,2774,504,18.17,,,,,,,,
+5. — indício em R$/cabeça,15956,1726,10.82,0.718,220.6,15607,1684,10.79,349,42,12.03,,,,,,,,
+"5. (sensibilidade) MAD escalado ×1,4826",46872,3728,7.95,1.551,970.7,42489,3172,7.47,4383,556,12.69,,,,,,,,
+"5. (regra literal) R$/ha para tudo, inclusive pecuária",52455,7355,14.02,3.061,2648.2,47458,6120,12.9,4997,1235,24.71,,,,,,,,

@@ -1,0 +1,11 @@
+ref_bacen,nu_ordem,banco,safra,finalidade,produto,unidade_medida,vl_parc_credito,vl_area_informada,vl_area_financ,area_ha,n_glebas,razao,unidade_suspeita,categoria,tipo,forca
+514098354,1,Demais,2021/22,Investimento,BOVINOS,Unidade Animal (450kg),150000.0,0.15,0.15,278.8101705966747,1,1858.734470644498,,gleba MAIOR que a área informada (>2×),indício,38.96383107725839
+515880187,1,BB,2022/23,Custeio,SOJA,Hectare,101023.36,19.41,19.41,389.0593498999414,1,20.044273565169572,,gleba MAIOR que a área informada (>2×),indício,15.002986747381833
+515161645,2,BB,2022/23,Custeio,BOVINOS,Unidade Animal (450kg),72615.48,39.76,39.76,500.2271834072077,1,12.581166584688322,,gleba MAIOR que a área informada (>2×),indício,12.309118081182556
+516776769,3,BB,2023/24,Investimento,CORREÇÃO INTENSIVA DO SOLO,Hectare,54000.0,14.14,14.14,180.20069128404137,1,12.744037573128809,,gleba MAIOR que a área informada (>2×),indício,12.044263193133382
+513013776,2,BB,2021/22,Custeio,BOVINOS,Unidade Animal (450kg),19940.0,33.03,33.03,503.7949953657803,1,15.252648966569188,,gleba MAIOR que a área informada (>2×),indício,11.71574917621698
+512804584,2,BB,2021/22,Custeio,BOVINOS,Unidade Animal (450kg),54639.34,36.47,36.47,401.4021531978645,1,11.006365593580052,,gleba MAIOR que a área informada (>2×),indício,11.36280173031111
+518431181,2,BB,2024/25,Custeio,BOVINOS,Unidade Animal (450kg),70288.4,4.51,4.51,40.09574009255537,1,8.890408002783895,,gleba MAIOR que a área informada (>2×),indício,10.590323149894294
+514378297,2,BB,2022/23,Investimento,CORREÇÃO INTENSIVA DO SOLO,Hectare,37500.0,2.35,2.35,20.51748174070008,1,8.730843293914928,,gleba MAIOR que a área informada (>2×),indício,9.911319463490058
+514378297,4,BB,2022/23,Investimento,CORREÇÃO INTENSIVA DO SOLO,Hectare,42500.0,2.66,2.66,20.37388737414151,1,7.659356155692297,,gleba MAIOR que a área informada (>2×),indício,9.42308708601427
+513226429,2,BB,2021/22,Custeio,BOVINOS,Unidade Animal (450kg),24590.66,16.84,16.84,141.80325969443047,1,8.420621121997058,,gleba MAIOR que a área informada (>2×),indício,9.355379623177257

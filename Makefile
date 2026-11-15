@@ -5,7 +5,7 @@
 PY := .venv/bin/python -I -u
 D := data/processed
 
-.PHONY: all env download ingest passo0 car camadas cruzamentos mapas relatorio clean-processed revisao
+.PHONY: all env download ingest passo0 car camadas cruzamentos mapas relatorio clean-processed revisao padroes
 
 all: passo0 relatorio
 
@@ -56,3 +56,6 @@ clean-processed:
 
 revisao: $(D)/cruz3_ops.parquet scripts/13_revisao_serra_dourada.py
 	$(PY) scripts/13_revisao_serra_dourada.py
+
+padroes: $(D)/cruz1_ops.parquet scripts/14_padroes_engano.py
+	$(PY) scripts/14_padroes_engano.py

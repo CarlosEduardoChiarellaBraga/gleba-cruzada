@@ -1,0 +1,336 @@
+ref_bacen,nu_ordem,safra,finalidade,produto,vl_parc_credito,cd_ibge_municipio,C1,C3,C4,C5,C2,n_cruzamentos,c1_categoria,dist_borda_km,c3_motivos,metrica,vezes_mediana,banco
+515288725,1,2022/23,Custeio,BOVINOS,1063800.0,5221601,True,False,False,True,True,3,gleba em outro CAR (não vizinho),1.2581815653535382,,R$/UA,7.11679491347856,Demais
+513099244,1,2021/22,Investimento,BOVINOS,399990.0,5201306,False,False,True,True,True,3,ok,0.0,,R$/UA,1.194,Demais
+515930504,1,2022/23,Investimento,BOVINOS,300000.0,5213103,True,False,False,True,True,3,gleba fora de qualquer CAR (<50% coberta),2.8659448781005024,,R$/UA,1.2422360248447204,Demais
+514957289,1,2022/23,Custeio,BOVINOS,161853.25,5213087,True,False,True,True,False,3,gleba em outro CAR (não vizinho),0.5811973004302344,,R$/UA,2.6986561179148154,BB
+514764065,1,2022/23,Investimento,CORREÇÃO INTENSIVA DO SOLO,5000000.0,5205109,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/ha,0.532655620178139,BB
+514839269,1,2022/23,Custeio,BOVINOS,3000000.0,5210109,False,False,False,True,True,2,ok,0.0,,R$/UA,3.4013605442176873,Demais
+514771976,1,2022/23,Custeio,BOVINOS,3000000.0,5204656,False,False,False,True,True,2,ok,0.0,,R$/UA,3.251985987842775,Demais
+514085681,1,2021/22,Custeio,SOJA,3000000.0,5214606,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/ha,1.9463783013944236,Demais
+515356714,1,2022/23,Custeio,BOVINOS,3000000.0,5208905,True,False,False,True,False,2,gleba em outro CAR (não vizinho),3.260533567361178,,R$/UA,1.45939717712112,Demais
+513130631,1,2021/22,Custeio,BOVINOS,2926528.8,5218003,False,False,False,True,True,2,ok,0.0,,R$/UA,3.4579426619315035,BB
+512997430,1,2021/22,Custeio,BOVINOS,2493132.6,5207907,True,False,False,True,False,2,gleba em outro CAR (não vizinho),20.334260179209615,,R$/UA,1.6500824004542947,BB
+512915527,1,2021/22,Custeio,BOVINOS,2394576.9,5218003,True,False,False,True,False,2,gleba em outro CAR (não vizinho),64.11538915330567,,R$/UA,3.7247748135222474,BB
+515862047,1,2022/23,Custeio,BOVINOS,2040000.0,5221601,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.7822499238278617,,R$/UA,16.256638127235288,Demais
+515103969,1,2022/23,Custeio,BOVINOS,2000000.0,5204656,False,False,False,True,True,2,ok,0.0,,R$/UA,3.0178429967180955,Demais
+513123566,1,2021/22,Custeio,MILHO,1800000.0,5211909,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.0,,R$/ha,1.568009592326139,Demais
+512910184,1,2021/22,Custeio,BOVINOS,1787400.0,5218003,False,False,False,True,True,2,gleba em CAR vizinho ao informado,0.0,,R$/UA,4.464316489018141,Demais
+513109320,1,2021/22,Custeio,SOJA,1500000.0,5214606,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.9339106825795696,,R$/ha,1.5013590210584078,Demais
+520167599,2,2024/25,Custeio,SOJA,1499811.01,5213756,False,False,True,True,False,2,ok,0.0,,R$/ha,1.0464319636544352,BB
+518319569,1,2024/25,Custeio,SOJA,1400000.0,5215306,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/ha,1.4320642973542996,Demais
+513267165,1,2021/22,Custeio,CAFÉ,1300000.0,5204805,True,False,False,False,True,2,gleba em outro CAR (não vizinho),13.039152746455123,,R$/ha,0.9409274684535816,Demais
+520215583,1,2024/25,Investimento,CORREÇÃO INTENSIVA DO SOLO,1278500.0,5204409,False,False,True,True,False,2,ok,0.0,,R$/ha,2.078736030145778,Demais
+513100777,1,2021/22,Custeio,BOVINOS,1170611.52,5214606,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,6.694190693691123,BB
+513149056,1,2021/22,Custeio,BOVINOS,1072122.57,5218003,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.2011625719540052,,R$/UA,3.457942661931504,BB
+520023899,1,2024/25,Custeio,BOVINOS,1050000.0,5211305,False,False,False,True,True,2,ok,0.0,,R$/UA,2.7821441985338105,Demais
+516774660,1,2023/24,Investimento,PASTAGEM,1023000.0,5214606,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/ha,0.889991383974192,BB
+516291008,1,2023/24,Custeio,BOVINOS,1005484.29,5222005,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.20243363800007874,,R$/cabeça,1.2475573567384564,BB
+518805247,1,2024/25,Custeio,BOVINOS,1000611.36,5207600,True,False,False,True,False,2,gleba em outro CAR (não vizinho),5.874044531927918,,R$/UA,1.227272727272727,BB
+515464544,1,2022/23,Custeio,BOVINOS,1000000.0,5211909,False,False,False,True,True,2,ok,0.0,,R$/UA,3.308015913574186,Demais
+520142154,1,2024/25,Investimento,CORREÇÃO INTENSIVA DO SOLO,1000000.0,5206206,False,False,True,True,False,2,ok,0.0,,R$/ha,3.1959484847235684,Demais
+514734191,1,2022/23,Custeio,CAFÉ,1000000.0,5204805,True,False,False,False,True,2,gleba em outro CAR (não vizinho),13.127507163601306,,R$/ha,1.1050973834290834,Demais
+516029898,1,2022/23,Custeio,SUÍNOS,900000.0,5213756,True,False,False,False,True,2,gleba em outro CAR (não vizinho),2.405386808259723,,R$/cabeça,0.1576152227837273,Demais
+512278537,1,2021/22,Investimento,BOVINOS,900000.0,5204300,False,False,False,True,True,2,ok,0.0,,R$/UA,1.5,BB
+513128785,1,2021/22,Custeio,BOVINOS,887282.38,5218003,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,2.9954274009166664,BB
+513968287,1,2021/22,Custeio,BOVINOS,863619.0,5219803,True,False,False,True,False,2,gleba em outro CAR (não vizinho),36.927089774735634,,R$/UA,4.219341316487608,BB
+516988848,1,2023/24,Custeio,BOVINOS,850000.0,5208905,False,True,False,True,False,2,ok,0.0,UC proteção integral > 10%,R$/UA,10.838346068389965,Demais
+517016585,1,2023/24,Custeio,BOVINOS,849898.38,5220207,False,False,False,True,True,2,ok,0.0,,R$/UA,1.811071916249431,BB
+516537826,1,2023/24,Custeio,SOJA,812406.0,5215306,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.25950505784229794,,R$/ha,1.413835121602913,Demais
+512477170,1,2021/22,Investimento,BOVINOS,803000.0,5205513,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),3.8750004471254527,,R$/UA,1.1,BB
+514859187,1,2022/23,Custeio,CAFÉ,800834.4,5204805,False,False,True,False,True,2,ok,0.0,,R$/ha,1.0,BB
+512897346,1,2021/22,Custeio,BOVINOS,729648.79,5204706,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.8855860817108472,,R$/UA,3.526596814172569,BB
+512979105,2,2021/22,Custeio,BOVINOS,707164.64,5208301,True,False,True,False,False,2,gleba em outro CAR (não vizinho),5.180547935571292,,R$/UA,2.6404954813944554,BB
+519792379,2,2024/25,Custeio,SOJA,684555.92,5218805,False,False,True,True,False,2,ok,0.0,,R$/ha,1.0464499306786406,BB
+513294810,1,2021/22,Custeio,BOVINOS,679356.0,5215702,True,False,False,True,False,2,gleba em outro CAR (não vizinho),2.5527680501973,,R$/UA,1.332310271225722,Demais
+520175312,1,2024/25,Custeio,BOVINOS,659534.46,5218904,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,5.369901371016851,BB
+518697905,1,2024/25,Custeio,BOVINOS,630000.0,5208905,False,True,False,True,False,2,ok,0.0,UC proteção integral > 10%,R$/UA,6.282423663317137,Demais
+514657871,1,2022/23,Custeio,BOVINOS,608882.82,5220264,False,False,False,True,True,2,ok,0.0,,R$/cabeça,1.1653551888095186,BB
+514453687,1,2022/23,Custeio,BOVINOS,599011.5,5208905,False,True,False,True,False,2,ok,0.0,UC proteção integral > 10%,R$/UA,1.5640648507848112,BB
+513216234,1,2021/22,Custeio,BOVINOS,595609.66,5217708,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.9511486631804282,BB
+519705542,1,2024/25,Custeio,SOJA,594180.74,5218805,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.0,,R$/ha,1.0464499209254368,BB
+512956310,1,2021/22,Custeio,MILHO,552264.7,5219308,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/ha,1.4010250632485806,BB
+518730583,1,2024/25,Custeio,BOVINOS,504000.0,5213806,False,False,False,True,True,2,ok,0.0,,R$/UA,1.6470588235294117,Demais
+513035717,1,2021/22,Custeio,BOVINOS,501528.54,5217302,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.2246568104113933,,R$/UA,7.284006937778042,BB
+516097262,1,2023/24,Custeio,BOVINOS,500719.95,5219704,True,False,False,True,False,2,gleba em outro CAR (não vizinho),2.620822717818182,,R$/UA,1.3053484331998066,BB
+518785994,1,2024/25,Custeio,BOVINOS,500000.0,5211602,False,False,False,True,True,2,ok,0.0,,R$/UA,1.559139567001996,Demais
+515494521,1,2022/23,Investimento,BOVINOS,499999.5,5211008,True,False,False,True,False,2,gleba em outro CAR (não vizinho),244.49478780927373,,R$/UA,2.22222,BB
+516223498,1,2023/24,Investimento,PASTAGEM,499960.0,5214606,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/ha,1.1464497895798647,BB
+514097791,1,2021/22,Investimento,BOVINOS,499000.0,5206206,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.976693652445897,,R$/UA,1.3528715018744817,Demais
+514099575,1,2021/22,Investimento,BOVINOS,499000.0,5221601,False,False,False,True,True,2,ok,0.0,,R$/UA,1.1088888888888888,Demais
+513911316,1,2021/22,Investimento,BOVINOS,498400.0,5212204,False,False,False,True,True,2,ok,0.0,,R$/UA,1.12,Demais
+513270985,1,2021/22,Investimento,BOVINOS,498000.0,5210901,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.3739409205404167,BB
+513016558,1,2021/22,Investimento,BOVINOS,495000.0,5218508,True,False,False,True,False,2,gleba em outro CAR (não vizinho),2.5806979120170235,,R$/UA,1.1333333333333333,BB
+515428148,1,2022/23,Investimento,BOVINOS,495000.0,5203401,False,False,False,True,True,2,ok,0.0,,R$/UA,1.25,BB
+512753792,1,2021/22,Investimento,BOVINOS,495000.0,5221601,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.1111111111111112,BB
+516980674,1,2023/24,Investimento,BOVINOS,495000.0,5213905,True,False,False,True,False,2,gleba em outro CAR (não vizinho),19.629547612975077,,R$/UA,1.10666799960012,BB
+518602523,1,2024/25,Investimento,BOVINOS,495000.0,5214838,False,False,False,True,True,2,ok,0.0,,R$/UA,1.2605042016806722,Demais
+515250194,1,2022/23,Custeio,BOVINOS,490884.6,5217708,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,2.0067035489101763,BB
+516700174,1,2023/24,Investimento,BOVINOS,490000.0,5207907,True,False,False,True,False,2,gleba em outro CAR (não vizinho),30.391889911543622,,R$/UA,1.2048192771084338,BB
+514026680,1,2021/22,Investimento,BOVINOS,490000.0,5207907,True,False,False,True,False,2,gleba em outro CAR (não vizinho),30.391889911543622,,R$/UA,1.4,BB
+513370691,1,2021/22,Investimento,BOVINOS,472500.0,5214838,True,False,False,True,False,2,gleba em outro CAR (não vizinho),3.615741791482921,,R$/UA,1.2209302325581395,BB
+513789952,2,2021/22,Investimento,BOVINOS,467500.0,5204656,True,False,False,True,False,2,gleba em outro CAR (não vizinho),11.892667142926596,,R$/UA,1.683168316831683,BB
+515057116,1,2022/23,Custeio,BOVINOS,459096.53,5200209,True,False,True,False,False,2,gleba em outro CAR (não vizinho),2.4311787629878974,,R$/UA,1.3117043714285714,BB
+512979105,1,2021/22,Custeio,BOVINOS,450439.5,5208301,True,False,False,True,False,2,gleba em outro CAR (não vizinho),6.801178938416455,,R$/UA,3.0498536834318073,BB
+513840395,1,2021/22,Investimento,BOVINOS,450000.0,5218003,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),0.11124411236600272,,R$/UA,1.1682242990654206,Demais
+513847652,1,2021/22,Investimento,BOVINOS,450000.0,5218003,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),0.11124411236600272,,R$/UA,1.1682242990654206,Demais
+517121299,2,2023/24,Investimento,CORREÇÃO INTENSIVA DO SOLO,448454.45,5210109,False,False,True,False,True,2,gleba em CAR vizinho ao informado,1.5624226977091427,,R$/ha,2.1567387883762716,Demais
+513281458,1,2021/22,Custeio,BOVINOS,448128.0,5220504,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,0.1643523569856923,Demais
+516143334,2,2023/24,Investimento,BOVINOS,444600.0,5207600,True,False,False,True,False,2,gleba em outro CAR (não vizinho),5.681546492155374,,R$/UA,1.4625,BB
+514209851,1,2022/23,Custeio,BOVINOS,440353.77,5202353,True,False,False,True,False,2,gleba em outro CAR (não vizinho),11.494225441006103,,R$/UA,1.7632341734320467,BB
+514935340,1,2022/23,Custeio,BOVINOS,434206.8,5219001,True,False,False,True,False,2,gleba em outro CAR (não vizinho),14.45951190243216,,R$/UA,2.1180984827198652,BB
+517121299,1,2023/24,Investimento,CORREÇÃO INTENSIVA DO SOLO,431350.11,5210109,False,False,True,False,True,2,gleba em CAR vizinho ao informado,0.8480642349541209,,R$/ha,2.1412113704092834,Demais
+513269652,1,2021/22,Custeio,BOVINOS,405512.0,5220504,True,False,False,False,True,2,gleba em outro CAR (não vizinho),0.5703509414428789,,R$/UA,1.302254057899764,BB
+513351114,1,2021/22,Investimento,BOVINOS,405000.0,5210109,True,False,False,False,True,2,gleba em outro CAR (não vizinho),0.7628598234046625,,,,BB
+513953679,1,2021/22,Investimento,BOVINOS,405000.0,5218003,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),0.11124411236600272,,R$/UA,0.7631142598733796,Demais
+518776982,1,2024/25,Custeio,BOVINOS,400000.0,5213103,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.85476279902254,Demais
+514790585,1,2022/23,Custeio,BOVINOS,400000.0,5211305,False,False,False,True,True,2,gleba em CAR vizinho ao informado,0.01488090350684328,,R$/UA,1.5992774312253588,Demais
+515305284,1,2022/23,Custeio,BOVINOS,400000.0,5211800,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,4.239688230286298,Demais
+519940411,1,2024/25,Custeio,BOVINOS,399990.0,5217203,False,False,False,True,True,2,ok,0.0,,R$/UA,3.1647414931006512,Demais
+512991689,1,2021/22,Custeio,BOVINOS,378888.75,5208103,True,False,False,True,False,2,gleba em outro CAR (não vizinho),7.11371960495508,,R$/UA,4.318743321222484,BB
+513219283,1,2021/22,Custeio,BOVINOS,372944.24,5220504,True,False,False,False,True,2,gleba em outro CAR (não vizinho),1.3248012748756999,,R$/UA,1.2775109653253984,BB
+515729044,1,2022/23,Custeio,SOJA,363504.64,5220009,True,False,True,False,False,2,gleba em outro CAR (não vizinho),0.0,,R$/ha,0.9094857267658428,BB
+515395073,1,2022/23,Custeio,BOVINOS,352585.0,5212808,False,False,False,True,True,2,ok,0.0,,R$/UA,6.642958748221906,Demais
+514998760,1,2022/23,Custeio,BOVINOS,351866.27,5222005,True,False,False,True,False,2,gleba em outro CAR (não vizinho),12.202842096690292,,R$/cabeça,1.2933751042722406,BB
+513119211,1,2021/22,Custeio,BOVINOS,351746.25,5218003,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.8027719500312982,,R$/UA,3.4579426619315035,BB
+518787059,1,2024/25,Custeio,BOVINOS,350000.0,5214101,False,False,False,True,True,2,ok,0.0,,R$/UA,1.4228070275284703,Demais
+514101117,1,2021/22,Custeio,BOVINOS,350000.0,5213103,True,False,False,False,True,2,gleba em outro CAR (não vizinho),83.33210922239007,,R$/UA,1.076356549072971,Demais
+514111962,1,2021/22,Custeio,BOVINOS,350000.0,5213103,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.2162829004524573,Demais
+514485433,1,2022/23,Custeio,BOVINOS,349511.12,5217302,True,False,True,False,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.8984563488023085,BB
+515028020,1,2022/23,Custeio,BOVINOS,349502.36,5214606,False,False,True,True,False,2,ok,0.0,,R$/UA,1.245610668713422,BB
+512298923,2,2021/22,Investimento,BOVINOS,336000.0,5207600,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.2,BB
+516747581,1,2023/24,Investimento,PASTAGEM,334660.0,5202155,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.6273853984970515,,R$/ha,1.7144569413017259,BB
+513324028,1,2021/22,Custeio,BOVINOS,321386.0,5214606,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,5.881149490912551,BB
+513274964,1,2021/22,Custeio,BOVINOS,320792.58,5212808,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,5.531471143261519,BB
+514225374,1,2022/23,Custeio,BOVINOS,310273.7,5213087,True,False,False,True,False,2,gleba em outro CAR (não vizinho),36.53209200054232,,R$/UA,3.0569740977565845,BB
+513971076,1,2021/22,Custeio,BOVINOS,307064.47,5220603,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.4888983183242452,,R$/cabeça,2.980972167942278,BB
+518673363,1,2024/25,Custeio,BOVINOS,301897.37,5213707,False,True,False,True,False,2,ok,0.0,água grande > 10%,R$/cabeça,1.850448163380751,BB
+514675725,1,2022/23,Custeio,BOVINOS,300575.23,5213509,False,False,False,True,True,2,ok,0.0,,R$/UA,2.7990579145980687,BB
+514839984,1,2022/23,Custeio,BOVINOS,300160.0,5214606,True,False,False,True,False,2,gleba em outro CAR (não vizinho),16.894359105371382,,R$/UA,25.71236688093639,Demais
+519679732,1,2024/25,Custeio,BOVINOS,300000.0,5204300,False,False,False,True,True,2,ok,0.0,,R$/UA,1.890151900639881,Demais
+513305743,1,2021/22,Investimento,BOVINOS,300000.0,5218805,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,0.7955347122013788,Demais
+514744641,1,2022/23,Investimento,BOVINOS,300000.0,5203401,False,False,False,True,True,2,gleba em CAR vizinho ao informado,3.0977016724555737,,R$/UA,1.25,BB
+517199625,1,2023/24,Custeio,BOVINOS,299200.0,5220108,True,False,False,False,True,2,gleba em outro CAR (não vizinho),2.276627263891041,,R$/UA,0.9674563464424962,Demais
+515511997,1,2022/23,Custeio,BOVINOS,299000.0,5218805,False,False,False,True,True,2,ok,0.0,,R$/cabeça,2.785121397647763,Demais
+512707623,1,2021/22,Custeio,BOVINOS,297422.5,5214606,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.803771424516849,,R$/cabeça,2.8101344972721503,BB
+515911088,1,2022/23,Custeio,SUÍNOS,281477.37,5213756,True,False,False,False,True,2,gleba em outro CAR (não vizinho),2.4971808844853887,,R$/cabeça,1.8423847772162727,BB
+515073945,1,2022/23,Custeio,BOVINOS,279423.11,5222005,False,False,True,True,False,2,ok,0.0,,R$/cabeça,1.29337462097819,BB
+513207834,1,2021/22,Custeio,BOVINOS,269496.62,5220504,True,True,False,False,False,2,gleba em outro CAR (não vizinho),4.621272065114612,RPPN > 10%,R$/UA,1.9232370544193822,BB
+514868037,1,2022/23,Custeio,MILHO,266417.1,5209101,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.3026717470578948,,R$/ha,1.1432837994358418,BB
+512887139,1,2021/22,Custeio,BOVINOS,260982.16,5213103,True,False,False,True,False,2,gleba em outro CAR (não vizinho),3.201893760422806,,R$/cabeça,1.7891416415938495,BB
+518243895,1,2024/25,Custeio,BOVINOS,260671.95,5215306,False,False,False,True,True,2,ok,0.0,,R$/cabeça,1.4920308896920385,BB
+514937239,1,2022/23,Custeio,MILHO,259394.57,5218805,False,False,True,True,False,2,ok,0.0,,R$/ha,1.4001415532543293,BB
+512906904,1,2021/22,Custeio,BOVINOS,258136.0,5204409,True,False,False,True,False,2,gleba em outro CAR (não vizinho),34.720890957942885,,R$/UA,3.3528074710031044,BB
+514941814,1,2022/23,Custeio,BOVINOS,258073.79,5217401,False,False,True,True,False,2,ok,0.0,,R$/cabeça,3.176299054865831,BB
+513965261,2,2021/22,Investimento,BOVINOS,258000.0,5201306,False,False,False,True,True,2,ok,0.0,,R$/UA,1.2,BB
+513970067,1,2021/22,Custeio,BOVINOS,253196.28,5211800,True,False,False,True,False,2,gleba em outro CAR (não vizinho),25.401052496858505,,R$/cabeça,2.0138614881986934,BB
+514874081,1,2022/23,Custeio,BOVINOS,252428.54,5214051,False,False,True,True,False,2,ok,0.0,,R$/UA,1.3624459724950884,BB
+514674253,1,2022/23,Custeio,BOVINOS,252202.24,5203302,False,False,False,True,True,2,ok,0.0,,R$/cabeça,2.8955481056257177,BB
+515961459,1,2022/23,Custeio,BOVINOS,250853.82,5205901,True,False,False,True,False,2,gleba em outro CAR (não vizinho),4.500365623880204,,R$/cabeça,1.3838626675387171,BB
+519820770,1,2024/25,Custeio,BOVINOS,250000.0,5213103,False,False,False,True,True,2,ok,0.0,,R$/UA,3.312076426825964,Demais
+513675163,1,2021/22,Custeio,BOVINOS,250000.0,5215306,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),0.05822408086081066,,R$/cabeça,1.8570674346580507,Demais
+512444468,1,2021/22,Investimento,BOVINOS,250000.0,5208905,True,True,False,False,False,2,gleba em outro CAR (não vizinho),4.337545445394736,UC proteção integral > 10%,R$/UA,0.9920634920634921,BB
+513199932,1,2021/22,Custeio,BOVINOS,250000.0,5211305,False,False,False,True,True,2,ok,0.0,,R$/UA,1.4242139037116326,Demais
+514279664,1,2022/23,Custeio,BOVINOS,244457.82,5213509,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,2.7736345820070674,BB
+514260496,1,2022/23,Custeio,BOVINOS,241054.38,5205901,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.02254000026056384,,R$/cabeça,1.4775588664377062,BB
+512625451,1,2021/22,Custeio,BOVINOS,230363.89,5213087,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,3.1913746507501464,BB
+512971042,1,2021/22,Custeio,BOVINOS,230363.89,5213087,True,False,False,True,False,2,gleba em outro CAR (não vizinho),26.417538909135125,,R$/UA,3.1913746507501464,BB
+515224125,1,2022/23,Investimento,BOVINOS,230000.0,5213103,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),2.442951324367641,,R$/UA,0.9852216748768473,Demais
+513136056,1,2021/22,Custeio,BOVINOS,226607.56,5220108,True,False,False,True,False,2,gleba em outro CAR (não vizinho),3.876200923082747,,R$/cabeça,3.144169709200213,BB
+515062001,1,2022/23,Custeio,BOVINOS,225189.45,5220504,True,False,True,False,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,0.8561713705747128,BB
+513270846,1,2021/22,Custeio,BOVINOS,221548.78,5214606,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.803771424516849,,R$/cabeça,2.8983564952261123,BB
+520131951,1,2024/25,Custeio,BOVINOS,210841.23,5203401,True,False,False,True,False,2,gleba em outro CAR (não vizinho),4.279333648147365,,R$/UA,3.8522094331222965,BB
+517368476,1,2023/24,Investimento,BOVINOS,210000.0,5208103,False,False,False,True,True,2,ok,0.0,,R$/UA,1.3333333333333333,Demais
+515303798,1,2022/23,Custeio,BOVINOS,207227.94,5208905,True,False,False,True,False,2,gleba em outro CAR (não vizinho),12.66222853741661,,R$/UA,1.4187063525924597,BB
+514340581,1,2022/23,Custeio,BOVINOS,206083.42,5210406,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.3803946627392531,,R$/cabeça,2.030662134644539,BB
+514923143,1,2022/23,Custeio,BOVINOS,205401.75,5215306,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.3239914767036884,,R$/UA,1.5413435238234598,BB
+514198818,1,2022/23,Custeio,BOVINOS,204641.39,5210406,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,2.1124745274299404,BB
+516667354,1,2023/24,Investimento,BOVINOS,204000.0,5220108,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.0303030303030303,BB
+513197823,1,2021/22,Custeio,BOVINOS,203988.28,5219357,False,True,False,True,False,2,ok,0.0,embargo IBAMA vigente,R$/UA,1.146666145987896,BB
+513117493,1,2021/22,Custeio,BOVINOS,202788.09,5204409,True,False,False,True,False,2,gleba em outro CAR (não vizinho),7.930835548609469,,R$/UA,3.173396890545648,BB
+517106948,1,2023/24,Custeio,BOVINOS,202171.52,5207535,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.67522502751663,BB
+513027818,1,2021/22,Custeio,BOVINOS,200996.09,5213087,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,3.0670121623893984,BB
+514242673,1,2022/23,Custeio,BOVINOS,200000.0,5215306,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.8795413476030398,,R$/UA,5.628032102295111,Demais
+516103294,1,2023/24,Custeio,BOVINOS,199980.0,5215306,False,False,False,True,True,2,gleba em CAR vizinho ao informado,0.0,,R$/cabeça,1.6844323883054724,Demais
+514542706,1,2022/23,Custeio,BOVINOS,198536.68,5202155,True,False,False,True,False,2,gleba em outro CAR (não vizinho),2.7774760161539804,,R$/cabeça,2.0183230530794023,BB
+518244028,1,2024/25,Custeio,BOVINOS,194869.78,5200829,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.5824350682923316,,R$/UA,1.4817205907651831,BB
+513239999,1,2021/22,Custeio,BOVINOS,190712.25,5204706,True,False,False,True,False,2,gleba em outro CAR (não vizinho),4.070831580731247,,R$/UA,2.9004893405878933,BB
+514302386,2,2022/23,Investimento,BOVINOS,190000.0,5206404,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.4898611525637493,,R$/UA,1.2345679012345678,BB
+515952484,2,2022/23,Investimento,BOVINOS,180000.0,5211305,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,2.690582959641256,BB
+512955740,1,2021/22,Custeio,MILHO,179969.98,5204409,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.244978623779117,,R$/ha,1.2732694333684056,BB
+513065289,1,2021/22,Custeio,BOVINOS,177998.1,5221601,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.336534889652361,,R$/UA,2.8199201922382295,BB
+513119497,1,2021/22,Custeio,BOVINOS,171652.53,5213087,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.5811973004302344,,R$/UA,2.9627660106965235,BB
+514036246,1,2021/22,Custeio,BOVINOS,171353.07,5208905,True,True,False,False,False,2,gleba em outro CAR (não vizinho),10.493780122920677,UC proteção integral > 10%,R$/UA,1.4922086898428377,BB
+514221558,1,2022/23,Custeio,BOVINOS,161616.96,5203939,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.1259006608399063,BB
+513046840,1,2021/22,Custeio,BOVINOS,160057.95,5207253,True,False,False,False,True,2,gleba em outro CAR (não vizinho),1.8332359459239818,,R$/UA,1.0,BB
+514088741,1,2021/22,Custeio,BOVINOS,160000.0,5214051,False,False,False,True,True,2,ok,0.0,,R$/UA,1.5686151481164854,Demais
+518204849,1,2023/24,Custeio,BOVINOS,160000.0,5220603,False,False,False,True,True,2,ok,0.0,,R$/cabeça,1.1507077043199527,Demais
+513108938,1,2021/22,Custeio,BOVINOS,160000.0,5213707,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,3.768870262294526,Demais
+513109063,1,2021/22,Custeio,BOVINOS,153923.6,5213707,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.6098659501920031,,R$/UA,3.2228782150295427,BB
+514365390,1,2022/23,Custeio,BOVINOS,152566.7,5214606,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),9.415760344134226,,R$/UA,6.653410726278422,BB
+513269465,1,2021/22,Custeio,BOVINOS,152335.8,5207105,True,False,False,True,False,2,gleba em outro CAR (não vizinho),13.655722609514442,,R$/cabeça,1.6680131000780705,BB
+514223388,1,2022/23,Custeio,BOVINOS,151339.72,5213806,True,False,False,True,False,2,gleba em outro CAR (não vizinho),3.3626733925875127,,R$/UA,1.6376932008661373,BB
+512824992,1,2021/22,Custeio,BOVINOS,151309.25,5203104,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.4928634713101734,,R$/cabeça,1.7552157362951495,BB
+512942536,1,2021/22,Investimento,BOVINOS,151200.0,5209408,True,True,False,False,False,2,gleba fora de qualquer CAR (<50% coberta),1.6927057670091745,UC proteção integral > 10%,R$/UA,1.0,BB
+514098354,1,2021/22,Investimento,BOVINOS,150000.0,5213103,False,False,True,False,True,2,ok,0.0,,R$/UA,1.1904761904761905,Demais
+514195137,1,2022/23,Custeio,BOVINOS,149917.68,5218003,True,False,False,True,False,2,gleba em outro CAR (não vizinho),11.837127866208512,,R$/cabeça,1.25000844913841,BB
+515443390,1,2022/23,Custeio,BOVINOS,149353.25,5218003,True,False,False,True,False,2,gleba em outro CAR (não vizinho),3.8191340996665586,,R$/cabeça,1.6981394335236748,BB
+513285696,1,2021/22,Custeio,BOVINOS,149140.41,5212808,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,5.531471143261519,BB
+514975431,1,2022/23,Custeio,BOVINOS,144277.44,5205901,False,False,True,True,False,2,ok,0.0,,R$/cabeça,1.3928641199169305,BB
+512670059,1,2021/22,Custeio,BOVINOS,140000.0,5220603,False,False,False,True,True,2,ok,0.0,,R$/cabeça,2.0192574247746538,Demais
+515955194,1,2022/23,Custeio,BOVINOS,137996.46,5213707,True,False,False,True,False,2,gleba em outro CAR (não vizinho),29.31747623188498,,R$/cabeça,1.7126035965598125,BB
+520181319,2,2024/25,Custeio,BOVINOS,135693.0,5206404,False,False,True,True,False,2,ok,0.0,,R$/UA,3.8446042431660548,BB
+517115019,3,2023/24,Investimento,BOVINOS,135000.0,5213806,True,False,False,True,False,2,gleba em outro CAR (não vizinho),22.19595810734297,,R$/UA,1.25,BB
+512716734,1,2021/22,Custeio,BOVINOS,135000.0,5213707,False,False,True,True,False,2,ok,0.0,,R$/UA,3.957313775409252,Demais
+514492476,2,2022/23,Custeio,BOVINOS,132130.5,5221601,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.5640508560890951,,R$/cabeça,2.6470199352120636,BB
+513387840,1,2021/22,Custeio,BOVINOS,130933.38,5205307,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.733879163154337,,R$/UA,1.7399197422439165,BB
+513293074,4,2021/22,Investimento,BOVINOS,130000.0,5214606,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.4207650273224044,BB
+513241689,1,2021/22,Custeio,BOVINOS,129848.65,5213103,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.5970637763137954,BB
+515107075,1,2022/23,Custeio,BOVINOS,129362.55,5222005,False,False,True,True,False,2,ok,0.0,,R$/cabeça,1.2933746117207265,BB
+514764795,1,2022/23,Investimento,PASTAGEM,125400.0,5202155,True,False,False,False,True,2,gleba em outro CAR (não vizinho),2.852072239684898,,R$/ha,1.0247057917183044,BB
+514958788,1,2022/23,Custeio,BOVINOS,125230.04,5205901,True,False,True,False,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,0.787589411148962,BB
+513020521,1,2021/22,Custeio,BOVINOS,122856.3,5212501,False,False,False,True,True,2,ok,0.0,,R$/cabeça,2.2145554444829645,BB
+514221674,1,2022/23,Custeio,BOVINOS,120266.58,5208004,True,False,False,True,False,2,gleba em outro CAR (não vizinho),2.4836697406971298,,R$/UA,2.9442911638396394,BB
+514195995,1,2022/23,Custeio,BOVINOS,120081.91,5213707,True,False,False,True,False,2,gleba em outro CAR (não vizinho),2.2758547139436085,,R$/cabeça,1.6558614051707616,BB
+515203416,1,2022/23,Custeio,BOVINOS,120000.0,5215306,False,False,False,True,True,2,gleba em CAR vizinho ao informado,0.01042211841458822,,R$/cabeça,36.18619087569505,Demais
+514548634,1,2022/23,Custeio,BOVINOS,119802.3,5208905,False,True,False,True,False,2,ok,0.0,UC proteção integral > 10%,R$/UA,1.5640648507848112,BB
+512800470,1,2021/22,Custeio,BOVINOS,119795.09,5213103,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.789141644042213,BB
+513998954,1,2021/22,Custeio,SOJA,118786.68,5220603,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.08885966202375825,,R$/ha,1.72896294737654,BB
+512600869,1,2021/22,Custeio,BOVINOS,117773.1,5210562,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.8777946595719537,BB
+512742756,1,2021/22,Custeio,MILHO,112462.88,5222054,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/ha,1.6661768538366726,BB
+513150164,1,2021/22,Custeio,BOVINOS,111712.92,5211602,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.8301964465854057,,R$/cabeça,1.4617510406411387,BB
+517709103,2,2023/24,Investimento,BOVINOS,108000.0,5214051,False,False,False,True,True,2,ok,0.0,,R$/UA,1.2,BB
+512518163,1,2021/22,Investimento,BÚFALOS (BUBALINOS),105000.0,5214903,True,True,False,False,False,2,gleba em outro CAR (não vizinho),5.251212038403057,UC proteção integral > 10%,,,BB
+517217985,1,2023/24,Custeio,BOVINOS,102273.4,5219357,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.2849273581672795,BB
+512271392,1,2021/22,Investimento,BOVINOS,102000.0,5207600,True,False,False,True,False,2,gleba em outro CAR (não vizinho),3.7156067062424203,,R$/UA,1.02,BB
+512982733,1,2021/22,Custeio,BOVINOS,101461.32,5213707,False,True,False,True,False,2,ok,0.0,água grande > 10%,R$/cabeça,1.8493123494582548,BB
+513139261,1,2021/22,Custeio,BOVINOS,100172.43,5204409,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.0,,R$/UA,3.173396890545648,BB
+517266852,1,2023/24,Custeio,BOVINOS,100000.0,5208004,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.3317160973047664,Demais
+519425478,1,2024/25,Custeio,BOVINOS,100000.0,5218300,False,False,False,True,True,2,ok,0.0,,R$/UA,1.9257741178654644,Demais
+513032765,1,2021/22,Custeio,BOVINOS,99967.34,5219803,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.11577961622837168,,R$/UA,3.9600451434182946,BB
+516294464,1,2023/24,Custeio,BOVINOS,99960.0,5215306,False,False,False,True,True,2,ok,0.0,,R$/cabeça,1.6839270080509552,Demais
+517604803,1,2023/24,Custeio,BOVINOS,99883.62,5207535,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.005289839367711386,,R$/cabeça,1.5259822550232776,BB
+514201778,1,2022/23,Custeio,BOVINOS,99745.12,5211206,True,False,False,True,False,2,gleba em outro CAR (não vizinho),2.8226378658516698,,R$/cabeça,1.3648844932395023,BB
+518374231,1,2024/25,Custeio,BOVINOS,99654.91,5215306,False,False,False,True,True,2,ok,0.0,,R$/cabeça,1.4939140430870153,BB
+519690661,1,2024/25,Custeio,BOVINOS,99480.2,5204953,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.2649579257376584,BB
+514478775,1,2022/23,Custeio,BOVINOS,98597.81,5213905,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.1015988285699856,BB
+513097155,1,2021/22,Custeio,BOVINOS,98488.95,5212808,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,5.531471143261518,BB
+516182470,1,2023/24,Custeio,BOVINOS,98441.96,5216809,True,False,False,True,False,2,gleba em outro CAR (não vizinho),20.62108930601545,,R$/cabeça,1.3791584779011208,BB
+514932080,1,2022/23,Custeio,BOVINOS,97762.41,5220504,True,False,True,False,False,2,gleba fora de qualquer CAR (<50% coberta),0.30949551202645753,,R$/UA,0.8803258872911851,BB
+517245657,1,2023/24,Custeio,BOVINOS,97525.8,5201306,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.17313876823403723,,R$/cabeça,1.593694746300918,BB
+519491350,1,2024/25,Custeio,BOVINOS,97312.49,5215306,False,False,False,True,True,2,ok,0.0,,R$/cabeça,1.8020459763149945,BB
+513255659,1,2021/22,Custeio,BOVINOS,97177.78,5215306,True,False,False,False,True,2,gleba em outro CAR (não vizinho),0.5249583222219107,,R$/cabeça,1.3690500666993164,BB
+514376902,1,2022/23,Custeio,BOVINOS,96495.26,5213806,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.8159274255771922,BB
+513170427,1,2021/22,Custeio,BOVINOS,95675.17,5214606,False,False,True,True,False,2,ok,0.0,,R$/UA,6.694203987618457,BB
+513032293,2,2021/22,Investimento,BOVINOS,92500.0,5212808,True,False,False,True,False,2,gleba em outro CAR (não vizinho),2.051429391749559,,R$/UA,3.7001850092504625,BB
+513760847,1,2021/22,Custeio,BOVINOS,90635.29,5220108,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.9053948102692746,BB
+513100407,1,2021/22,Custeio,BOVINOS,90384.3,5208608,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.7429560964886062,BB
+513010428,1,2021/22,Custeio,BOVINOS,89659.84,5204409,True,False,False,True,False,2,gleba em outro CAR (não vizinho),15.13828457096507,,R$/UA,3.6392175708849086,BB
+513344390,1,2021/22,Custeio,BOVINOS,86396.79,5203302,False,False,True,True,False,2,ok,0.0,,R$/UA,1.1519571999999998,BB
+520102245,1,2024/25,Custeio,BOVINOS,85250.0,5207907,False,False,False,True,True,2,ok,0.0,,R$/UA,4.180023742534858,Demais
+514924989,2,2022/23,Custeio,BOVINOS,85008.15,5215207,False,False,True,True,False,2,ok,0.0,,R$/cabeça,1.0776531876587325,BB
+513700668,1,2021/22,Custeio,BOVINOS,82808.34,5205307,True,False,False,True,False,2,gleba em outro CAR (não vizinho),8.493485906424807,,R$/UA,1.2901310706588773,BB
+520121569,1,2024/25,Custeio,BOVINOS,80000.0,5215306,False,False,False,True,True,2,ok,0.0,,R$/UA,2.016830459601012,Demais
+520074636,1,2024/25,Custeio,BOVINOS,79674.03,5206701,False,False,False,True,True,2,ok,0.0,,R$/UA,4.371482367828877,BB
+514391542,1,2022/23,Custeio,BOVINOS,77833.28,5209457,True,False,False,True,False,2,gleba em outro CAR (não vizinho),6.269536879753604,,R$/UA,1.2701029420499768,BB
+515802335,1,2022/23,Custeio,BOVINOS,71841.24,5217708,True,False,False,True,False,2,gleba em outro CAR (não vizinho),18.598138662130722,,R$/cabeça,1.4684110202897762,BB
+515088284,1,2022/23,Custeio,BOVINOS,71489.99,5221502,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.0698568298065587,BB
+515897143,1,2022/23,Custeio,BOVINOS,70585.63,5214606,False,True,False,True,False,2,ok,0.0,água grande > 10%,R$/cabeça,1.3581711298379688,BB
+519400173,1,2024/25,Investimento,CORREÇÃO INTENSIVA DO SOLO,70125.0,5204409,False,False,True,True,False,2,ok,0.0,,R$/ha,7.209061364972188,Demais
+512983974,1,2021/22,Custeio,BOVINOS,69076.74,5204300,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.5381309636835833,,R$/cabeça,1.7252680038790746,BB
+515965929,1,2022/23,Custeio,BOVINOS,68077.54,5200829,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.7037465063272559,BB
+512930233,1,2021/22,Custeio,BOVINOS,66729.42,5217401,False,False,False,True,True,2,ok,0.0,,R$/cabeça,1.7805394839195685,Demais
+517149568,1,2023/24,Custeio,BOVINOS,65908.08,5200829,True,False,False,True,False,2,gleba em outro CAR (não vizinho),2.5518836399453133,,R$/cabeça,1.5083977168719043,BB
+513823807,2,2021/22,Investimento,BOVINOS,64000.0,5219704,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.660522927140875,,R$/UA,3.350785340314136,BB
+513588805,1,2021/22,Custeio,BOVINOS,63170.05,5219001,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.002976714387224777,,R$/cabeça,1.7064772335262406,BB
+513234375,1,2021/22,Custeio,BOVINOS,61780.32,5200829,True,False,False,True,False,2,gleba em outro CAR (não vizinho),2.5518836399453133,,R$/cabeça,1.5852773707831147,BB
+513632752,1,2021/22,Custeio,BOVINOS,61494.26,5216809,True,False,False,True,False,2,gleba em outro CAR (não vizinho),4.761640596234453,,R$/cabeça,1.9481785169026264,BB
+515908793,1,2022/23,Custeio,BOVINOS,60028.5,5207105,False,False,True,True,False,2,ok,0.0,,R$/cabeça,3.4349657696506926,BB
+513293074,2,2021/22,Investimento,PASTAGEM,60000.0,5214606,True,True,False,False,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,água grande > 10%,R$/ha,0.9071051403232394,BB
+516290968,1,2023/24,Custeio,BOVINOS,60000.0,5215306,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),15.945551394071732,,R$/cabeça,0.306291063343693,Demais
+514210256,2,2022/23,Investimento,BOVINOS,60000.0,5202353,True,False,False,False,True,2,gleba em outro CAR (não vizinho),5.5795294942611555,,,,BB
+513054357,1,2021/22,Custeio,BOVINOS,57605.47,5207535,True,False,False,True,False,2,gleba em outro CAR (não vizinho),12.946488427911618,,R$/cabeça,2.0728430805280644,BB
+512914719,1,2021/22,Custeio,BOVINOS,57482.94,5207600,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.9953865230581156,,R$/cabeça,1.2456487411204937,BB
+513342448,1,2021/22,Custeio,BOVINOS,56635.11,5209408,True,False,False,True,False,2,gleba em outro CAR (não vizinho),3.1815442629801938,,R$/UA,3.6554888379847377,BB
+514955113,1,2022/23,Custeio,BOVINOS,56364.9,5221304,True,False,True,False,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.03685345119828,BB
+516303928,1,2023/24,Custeio,BOVINOS,53556.05,5203302,True,False,False,True,False,2,gleba em outro CAR (não vizinho),4.412667086852607,,R$/cabeça,1.773324049656254,BB
+515425799,1,2022/23,Custeio,BOVINOS,53360.87,5220108,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.3948084070026394,BB
+513943819,1,2021/22,Custeio,BOVINOS,52698.0,5220207,True,False,False,True,False,2,gleba em outro CAR (não vizinho),3.914224925559411,,R$/cabeça,3.1115819008885173,BB
+517553442,1,2023/24,Custeio,BOVINOS,52423.18,5203302,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.7358129633058963,BB
+512239006,1,2021/22,Custeio,BOVINOS,52217.8,5209408,True,False,False,True,False,2,gleba em outro CAR (não vizinho),3.681227358909439,,R$/UA,3.538894235330795,BB
+519043376,1,2024/25,Custeio,BOVINOS,50886.72,5218904,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.03019964945048048,,R$/cabeça,1.1611512925457756,BB
+514197295,1,2022/23,Custeio,BOVINOS,50872.0,5200829,True,False,True,False,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,0.5523621320535511,BB
+513730229,1,2021/22,Custeio,BOVINOS,50081.76,5204656,True,False,False,True,False,2,gleba em outro CAR (não vizinho),27.485036699183315,,R$/cabeça,2.793510934735291,BB
+514009994,1,2021/22,Custeio,BOVINOS,50000.0,5215306,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,2.9608925314446792,Demais
+514949283,1,2022/23,Custeio,BOVINOS,50000.0,5215306,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),15.945551394071732,,R$/cabeça,0.22844817472029705,Demais
+519973047,1,2024/25,Custeio,BOVINOS,50000.0,5206701,False,False,False,True,True,2,ok,0.0,,R$/UA,2.041055838185093,Demais
+513188663,1,2021/22,Custeio,BOVINOS,49853.69,5215702,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.9426142806802464,,R$/cabeça,2.123593356647825,BB
+513044838,1,2021/22,Custeio,BOVINOS,48450.38,5221577,True,False,False,True,False,2,gleba em outro CAR (não vizinho),2.8251828281490696,,R$/UA,2.7922933308513143,BB
+513108527,1,2021/22,Custeio,BOVINOS,48063.48,5205703,True,False,False,True,False,2,gleba em outro CAR (não vizinho),2.038856199225395,,R$/cabeça,1.49983348092122,BB
+517125317,1,2023/24,Custeio,BOVINOS,45900.0,5203302,False,False,False,True,True,2,ok,0.0,,R$/cabeça,1.9757664361540606,Demais
+515937968,1,2022/23,Custeio,BOVINOS,45287.4,5220207,True,False,False,True,False,2,gleba em outro CAR (não vizinho),3.914224925559411,,R$/cabeça,2.656083948566723,BB
+513233322,1,2021/22,Custeio,BOVINOS,45023.61,5213087,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),46.163224850715984,,R$/UA,2.962765719429763,BB
+513724789,2,2021/22,Investimento,BOVINOS,45000.0,5213087,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,2.7777777777777777,BB
+514042966,3,2021/22,Investimento,BOVINOS,45000.0,5213087,True,False,False,True,False,2,gleba em outro CAR (não vizinho),11.677700350080434,,R$/UA,2.7777777777777777,BB
+516375780,2,2023/24,Investimento,BOVINOS,45000.0,5207253,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.3983771904669346,,R$/UA,3.90665158836229,BB
+518953738,3,2024/25,Investimento,BOVINOS,45000.0,5219803,False,True,False,True,False,2,ok,0.0,UC proteção integral > 10%,R$/UA,3.78000378000378,BB
+515703171,1,2022/23,Custeio,BOVINOS,44080.72,5201306,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.372821444565765,BB
+515740140,1,2022/23,Custeio,BOVINOS,43672.6,5210000,True,False,False,True,False,2,gleba em outro CAR (não vizinho),11.704200221625884,,R$/cabeça,1.3785878313552946,BB
+516084395,1,2023/24,Custeio,BOVINOS,41510.7,5212808,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.418081165395609,BB
+516334931,3,2023/24,Investimento,BOVINOS,40500.0,5220108,False,False,False,True,True,2,ok,0.0,,R$/UA,1.0227272727272727,BB
+514883795,2,2022/23,Investimento,BOVINOS,40000.0,5208608,True,False,False,True,False,2,gleba em outro CAR (não vizinho),16.723670387227322,,R$/UA,4.444444444444445,BB
+513008343,1,2021/22,Custeio,BOVINOS,40000.0,5215306,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),15.945551394071732,,R$/cabeça,0.2042774178123856,Demais
+515997666,1,2022/23,Custeio,BOVINOS,38589.25,5219209,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.3689607048493155,BB
+512360816,1,2021/22,Custeio,BOVINOS,37350.0,5206206,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,2.1834608167120564,BB
+512504971,1,2021/22,Custeio,BOVINOS,36380.88,5215652,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.4286198951835072,,R$/cabeça,1.9917774102975905,BB
+512824017,2,2021/22,Investimento,BOVINOS,36000.0,5213087,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,2.2222222222222223,BB
+514548915,1,2022/23,Custeio,BOVINOS,33357.12,5209457,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.825363193476299,,R$/UA,1.270102942049977,BB
+514322664,1,2022/23,Custeio,BOVINOS,33287.15,5213087,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.2452871619995126,,R$/UA,2.7750623171128215,BB
+516062346,1,2022/23,Custeio,BOVINOS,33280.8,5215652,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.4286198951835072,,R$/cabeça,1.3602872499809302,BB
+515338043,1,2022/23,Custeio,BOVINOS,32080.18,5217302,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,1.3482842840311517,BB
+516208987,1,2023/24,Custeio,BOVINOS,31761.43,5219001,True,False,False,True,False,2,gleba em outro CAR (não vizinho),15.370788172471258,,R$/cabeça,1.066537582029409,BB
+512549413,1,2021/22,Custeio,BOVINOS,30820.7,5216908,True,False,True,False,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,0.19596693689397554,BB
+514851057,3,2022/23,Investimento,BOVINOS,30000.0,5213087,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,3.0,BB
+513383378,2,2021/22,Investimento,BOVINOS,30000.0,5208103,True,False,False,True,False,2,gleba em outro CAR (não vizinho),7.085448904848212,,R$/UA,3.3333333333333335,BB
+513890219,2,2021/22,Investimento,BOVINOS,30000.0,5203939,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.4430394300901226,,R$/UA,2.830188679245283,BB
+516764417,1,2023/24,Custeio,BOVINOS,30000.0,5215306,False,False,False,True,True,2,ok,0.0,,R$/UA,1.6247587233295855,Demais
+512525192,2,2021/22,Investimento,BOVINOS,30000.0,5200829,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,3.3003300330033003,BB
+516686213,2,2023/24,Investimento,BOVINOS,30000.0,5207253,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.040463811800716,,R$/UA,3.90665158836229,BB
+513234354,1,2021/22,Custeio,BOVINOS,28838.08,5220058,True,True,False,False,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,água grande > 10%,R$/cabeça,0.9975061516052396,BB
+513056978,2,2021/22,Investimento,BOVINOS,28000.0,5208905,False,True,False,True,False,2,ok,0.0,UC proteção integral > 10%,R$/UA,2.7777777777777777,BB
+514434370,1,2022/23,Custeio,BOVINOS,27401.21,5214606,True,False,False,True,False,2,gleba em outro CAR (não vizinho),9.035038816306766,,R$/UA,2.1200949822507913,BB
+515217374,2,2022/23,Investimento,BOVINOS,27000.0,5221601,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.23969665371851623,,R$/UA,3.0,BB
+520071119,3,2024/25,Investimento,BOVINOS,25500.0,5214606,True,False,False,True,False,2,gleba em outro CAR (não vizinho),80.863638939236,,R$/UA,2.125,BB
+516883604,3,2023/24,Investimento,BOVINOS,25500.0,5213087,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.8888888888888888,BB
+513221708,1,2021/22,Custeio,BOVINOS,25000.0,5215306,True,False,False,False,True,2,gleba em outro CAR (não vizinho),0.5500127027633043,,R$/cabeça,0.4085548356247712,Demais
+512446086,5,2021/22,Investimento,BOVINOS,22500.0,5213806,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.3636363636363635,BB
+513281727,1,2021/22,Custeio,BOVINOS,21731.22,5200829,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.7873303305012505,,R$/cabeça,1.5932032033830024,BB
+515279090,1,2022/23,Custeio,BOVINOS,21634.24,5200829,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.7873303305012505,,R$/cabeça,1.7075886990254174,BB
+514631956,1,2022/23,Custeio,BOVINOS,21582.25,5209408,True,True,False,False,False,2,gleba fora de qualquer CAR (<50% coberta),1.6927057670091745,UC proteção integral > 10%,R$/UA,0.4858651178235151,BB
+513884187,1,2021/22,Custeio,BOVINOS,21084.6,5209408,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.13007133461382556,,R$/UA,2.8578825379183215,BB
+512624149,1,2021/22,Investimento,BOVINOS,21000.0,5213905,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.4,BB
+513713531,1,2021/22,Custeio,BOVINOS,20000.0,5215306,True,False,False,False,True,2,gleba em outro CAR (não vizinho),0.5500127027633043,,R$/cabeça,0.510693544530964,Demais
+513713604,1,2021/22,Custeio,BOVINOS,20000.0,5215306,True,False,False,False,True,2,gleba em outro CAR (não vizinho),0.5500127027633043,,R$/cabeça,0.510693544530964,Demais
+512927956,1,2021/22,Custeio,BOVINOS,19500.0,5215306,True,False,False,False,True,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/cabeça,0.25699417079622705,Demais
+512688548,1,2021/22,Custeio,BOVINOS,17056.75,5209408,True,True,False,False,False,2,gleba fora de qualquer CAR (<50% coberta),1.6927057670091745,UC proteção integral > 10%,R$/UA,0.9247733033330171,BB
+519277519,2,2024/25,Investimento,BOVINOS,16900.0,5205307,True,False,False,True,False,2,gleba em outro CAR (não vizinho),3.2429388642719257,,R$/UA,1.8777777777777778,BB
+515969110,1,2022/23,Custeio,BOVINOS,16049.21,5201306,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.26912882481741723,,R$/cabeça,1.356671168809166,BB
+516145697,1,2023/24,Custeio,BOVINOS,16013.26,5211206,True,False,False,True,False,2,gleba em outro CAR (não vizinho),10.650111909500055,,R$/cabeça,1.3795417094573965,BB
+512873428,3,2021/22,Investimento,BOVINOS,15000.0,5214606,True,False,False,True,False,2,gleba em outro CAR (não vizinho),8.828438214320263,,R$/UA,3.278688524590164,BB
+512890537,3,2021/22,Investimento,BOVINOS,15000.0,5204656,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,2.9702970297029703,BB
+514918897,3,2022/23,Investimento,BOVINOS,15000.0,5213087,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.2130850448239192,,R$/UA,3.0,BB
+514921650,3,2022/23,Investimento,BOVINOS,15000.0,5213087,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,3.0,BB
+514075176,3,2021/22,Investimento,BOVINOS,15000.0,5213087,True,False,False,True,False,2,gleba em outro CAR (não vizinho),6.000868448671982,,R$/UA,1.3888888888888888,BB
+512803863,1,2021/22,Custeio,BOVINOS,14896.65,5217302,True,False,True,False,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.0519241543889164,BB
+515757700,1,2022/23,Custeio,BOVINOS,14543.64,5208905,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.8916400691629445,,R$/cabeça,2.0741688209939486,BB
+516698478,3,2023/24,Investimento,BOVINOS,13500.0,5213087,True,False,False,True,False,2,gleba em outro CAR (não vizinho),6.234235615624288,,R$/UA,3.0,BB
+516661523,3,2023/24,Investimento,BOVINOS,13000.0,5213087,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,2.888888888888889,BB
+512490642,2,2021/22,Investimento,BOVINOS,12000.0,5219001,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.0062672390315854,,R$/UA,2.1818181818181817,BB
+516615293,2,2023/24,Investimento,BOVINOS,11000.0,5214101,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.16977934295973232,,R$/UA,3.0985915492957745,BB
+512923099,3,2021/22,Investimento,BOVINOS,10200.0,5212204,True,False,False,True,False,2,gleba em outro CAR (não vizinho),12.04114891703089,,R$/UA,2.04,BB
+514903706,1,2022/23,Custeio,BOVINOS,10181.75,5204656,True,True,False,False,False,2,gleba em outro CAR (não vizinho),0.2943459026294149,água grande > 10%,R$/cabeça,0.851594791262882,BB
+512421062,2,2021/22,Investimento,BOVINOS,10100.0,5214606,True,False,False,True,False,2,gleba em outro CAR (não vizinho),25.38478479098814,,R$/UA,2.2076502732240435,BB
+512377941,2,2021/22,Investimento,BOVINOS,10000.0,5215652,True,False,False,True,False,2,gleba em outro CAR (não vizinho),0.4286198951835072,,R$/UA,2.051282051282051,BB
+513452330,2,2021/22,Investimento,BOVINOS,10000.0,5210109,True,False,False,True,False,2,gleba em outro CAR (não vizinho),4.197411945701074,,R$/UA,2.1000042000084003,BB
+513764706,1,2021/22,Investimento,BOVINOS,9500.0,5213905,True,False,False,True,False,2,gleba fora de qualquer CAR (<50% coberta),0.0,,R$/UA,1.9,BB
+513424191,2,2021/22,Investimento,BOVINOS,9400.0,5205307,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.733879163154337,,R$/UA,1.88,BB
+513498779,1,2021/22,Investimento,BOVINOS,8999.0,5213905,True,False,False,True,False,2,gleba em outro CAR (não vizinho),1.0698290199584177,,R$/UA,1.7998,BB

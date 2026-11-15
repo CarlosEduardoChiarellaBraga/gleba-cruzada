@@ -1,0 +1,8 @@
+classe,BB×BB,BB×Demais,Demais×Demais
+"indício forte: mesmo produto, mesmo ciclo",4,0,1
+"indício: mesmo empreendimento, contratos simultâneos (pecuária/invest.)",5119,359,336
+"indício: mesmo produto agrícola, sem datas",41,26,24
+"provável legítimo: mesmo empreendimento, contratos sequenciais",11,3,6
+"provável legítimo: mesmo produto, ciclos distintos",221,18,71
+"provável legítimo: mesmo produto, empreendimentos diferentes (pecuária/invest.)",1838,195,61
+ruído: produtos diferentes (sucessão/consórcio),1321,238,284

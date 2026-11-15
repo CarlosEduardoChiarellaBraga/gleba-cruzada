@@ -1,0 +1,16 @@
+cruzamento,elegiveis,disparam,pct_elegiveis,pct_recorte,valor_disparos_rs_mi,bb_elegiveis,bb_disparam,bb_pct,demais_elegiveis,demais_disparam,demais_pct,imoveis_car,areas_distintas
+3. Geometria impossível — qualquer indício,82552,123,0.15,0.051,31.1,73470,119,0.16,9082,4,0.04,91,100
+3. — água grande > 10% (indício),82552,27,0.03,0.011,3.8,73470,26,0.04,9082,1,0.01,20,23
+3. — arroz sobre várzea/água (ruído provável),82552,4,0.0,0.002,0.9,73470,0,0.0,9082,4,0.04,1,4
+3. — aquicultura sobre água (esperado),82552,61,0.07,0.025,18.2,73470,50,0.07,9082,11,0.12,45,53
+3. — açude pequeno > 10% (ruído provável),82552,19,0.02,0.008,10.4,73470,18,0.02,9082,1,0.01,15,18
+3. — terra indígena > 10% (indício),82552,0,0.0,0.0,0.0,73470,0,0.0,9082,0,0.0,0,0
+3. — UC proteção integral > 10% (indício),82552,63,0.08,0.026,19.1,73470,60,0.08,9082,3,0.03,37,47
+3. — RPPN > 10% (indício),82552,4,0.0,0.002,0.5,73470,4,0.01,9082,0,0.0,2,4
+"3. — APA > 10% (contexto, permitido)",82552,1379,1.67,0.574,277.1,73470,1268,1.73,9082,111,1.22,611,958
+3. — embargo IBAMA vigente (polígono > 10%) antes do contrato (indício),82552,9,0.01,0.004,4.4,73470,9,0.01,9082,0,0.0,7,8
+3. — embargo IBAMA vigente (ponto na gleba) antes do contrato (indício fraco),82552,18,0.02,0.007,2.1,73470,18,0.02,9082,0,0.0,17,16
+3. — embargo só DEPOIS do contrato (contexto),82552,21,0.03,0.009,4.3,73470,19,0.03,9082,2,0.02,11,15
+3. — fora do município: maior parte em vizinho (erro de cadastro provável),82552,51,0.06,0.021,7.1,73470,49,0.07,9082,2,0.02,42,45
+3. — fora do município: não vizinho (indício),82552,2,0.0,0.001,1.1,73470,2,0.0,9082,0,0.0,8,2
+3. — fora de GO (> 50% da gleba),82552,0,0.0,0.0,0.0,73470,0,0.0,9082,0,0.0,0,0

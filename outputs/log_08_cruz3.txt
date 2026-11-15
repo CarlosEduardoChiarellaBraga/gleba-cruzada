@@ -1,0 +1,22 @@
+operações com gleba: 82,552
+água ok
+UC ok
+embargos: pares gleba×embargo 307; válidos 28
+  glebas inteiras num município: 79,490; de borda: 3,062
+município ok
+                                                                       cruzamento  disparam  pct_elegiveis  bb_pct  demais_pct  imoveis_car  areas_distintas
+0                                      3. Geometria impossível — qualquer indício       123           0.15    0.16        0.04           91              100
+1                                                3. — água grande > 10% (indício)        27           0.03    0.04        0.01           20               23
+2                                   3. — arroz sobre várzea/água (ruído provável)         4           0.00    0.00        0.04            1                4
+3                                          3. — aquicultura sobre água (esperado)        61           0.07    0.07        0.12           45               53
+4                                       3. — açude pequeno > 10% (ruído provável)        19           0.02    0.02        0.01           15               18
+5                                             3. — terra indígena > 10% (indício)         0           0.00    0.00        0.00            0                0
+6                                       3. — UC proteção integral > 10% (indício)        63           0.08    0.08        0.03           37               47
+7                                                       3. — RPPN > 10% (indício)         4           0.00    0.01        0.00            2                4
+8                                            3. — APA > 10% (contexto, permitido)      1379           1.67    1.73        1.22          611              958
+9         3. — embargo IBAMA vigente (polígono > 10%) antes do contrato (indício)         9           0.01    0.01        0.00            7                8
+10  3. — embargo IBAMA vigente (ponto na gleba) antes do contrato (indício fraco)        18           0.02    0.02        0.00           17               16
+11                                  3. — embargo só DEPOIS do contrato (contexto)        21           0.03    0.03        0.02           11               15
+12     3. — fora do município: maior parte em vizinho (erro de cadastro provável)        51           0.06    0.07        0.02           42               45
+13                                  3. — fora do município: não vizinho (indício)         2           0.00    0.00        0.00            8                2
+14                                               3. — fora de GO (> 50% da gleba)         0           0.00    0.00        0.00            0                0

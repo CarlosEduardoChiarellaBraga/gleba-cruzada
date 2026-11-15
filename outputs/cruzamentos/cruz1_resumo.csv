@@ -1,0 +1,12 @@
+cruzamento,elegiveis,disparam,pct_elegiveis,pct_recorte,valor_disparos_rs_mi,bb_elegiveis,bb_disparam,bb_pct,demais_elegiveis,demais_disparam,demais_pct
+1. Gleba × CAR — qualquer sinal (sobrep<50% ou >5 km),82548,7860,9.52,3.271,2060.4,73468,7088,9.65,9080,772,8.5
+1. Gleba × CAR — indício,82548,3181,3.85,1.324,809.2,73468,2918,3.97,9080,263,2.9
+1. Gleba × CAR — erro de cadastro provável,82548,4064,4.92,1.691,957.8,73468,3667,4.99,9080,397,4.37
+1. Gleba × CAR — ruído provável,82548,615,0.75,0.256,293.4,73468,503,0.68,9080,112,1.23
+1. — CAR de outro município e gleba fora dele,82548,54,0.07,0.022,10.1,73468,52,0.07,9080,2,0.02
+1. — CAR informado não existe no SICAR,82548,35,0.04,0.015,18.4,73468,31,0.04,9080,4,0.04
+1. — gleba em CAR vizinho ao informado,82548,3975,4.82,1.654,929.3,73468,3584,4.88,9080,391,4.31
+1. — gleba em outro CAR (não vizinho),82548,1604,1.94,0.668,430.4,73468,1480,2.01,9080,124,1.37
+1. — gleba fora de qualquer CAR (<50% coberta),82548,1577,1.91,0.656,378.8,73468,1438,1.96,9080,139,1.53
+1. — sobreposição ok mas centroides > 5 km (CAR grande),82548,615,0.75,0.256,293.4,73468,503,0.68,9080,112,1.23
+1. (contexto) CAR informado hoje cancelado,82548,570,0.69,0.237,395.0,73468,454,0.62,9080,116,1.28

@@ -1,0 +1,9 @@
+cruzamento,elegiveis,disparam,pct_elegiveis,pct_recorte,valor_disparos_rs_mi,bb_elegiveis,bb_disparam,bb_pct,demais_elegiveis,demais_disparam,demais_pct
+"2. Regra original: mesma safra+finalidade, >50% (qualquer produto)",82552,15906,19.27,6.62,3674.6,73470,14048,19.12,9082,1858,20.46
+2. Indício (mesmo produto; exclui ciclos distintos),82552,9426,11.42,3.923,1815.7,73470,8558,11.65,9082,868,9.56
+"2. — indício forte (agrícola, mesmo ciclo)",82552,10,0.01,0.004,0.5,73470,8,0.01,9082,2,0.02
+2. — mesmo empreendimento simultâneo (pecuária/invest.),82552,9256,11.21,3.852,1548.9,73470,8457,11.51,9082,799,8.8
+2. — mesmo produto agrícola sem datas,82552,160,0.19,0.067,266.3,73470,93,0.13,9082,67,0.74
+2. — indício com bancos diferentes,82552,802,0.97,0.334,401.5,73470,346,0.47,9082,456,5.02
+"2. (contexto) provável legítimo (ciclos distintos, sequenciais ou empreend. diferentes)",82552,4258,5.16,1.772,814.8,73470,3827,5.21,9082,431,4.75
+2. (contexto) produtos diferentes,82552,3327,4.03,1.385,1260.9,73470,2639,3.59,9082,688,7.58

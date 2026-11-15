@@ -1,0 +1,11 @@
+ref_bacen,nu_ordem,banco,safra,finalidade,produto,vl_parc_credito,area_ha,sobrep,dist_centroides_km,dist_borda_km,melhor_car_frac,melhor_car_vizinho,car_status,car_atualizado_apos_contrato,categoria,tipo
+512988341,1,BB,2021/22,Custeio,SOJA,358644.0,101.50102320226017,0.0,584.5845787303733,582.1690598934545,0.9627895822564132,False,AT,False,gleba em outro CAR (não vizinho),indício
+516135348,1,BB,2023/24,Investimento,PROTEÇÃO DO SOLO,4630525.6,485.8228798336925,0.0,368.37770828901154,364.2304089552633,0.8989357108439691,False,AT,False,gleba em outro CAR (não vizinho),indício
+518283009,1,BB,2024/25,Custeio,BOVINOS,588955.2,78.97688045998493,0.0,361.312252707357,359.1389350836369,0.9999897890095397,False,AT,True,gleba em outro CAR (não vizinho),indício
+513537414,1,BB,2021/22,Investimento,BOVINOS,289560.0,56.8589151959255,0.0,360.68512242674893,358.8721760960868,1.0,False,AT,True,gleba em outro CAR (não vizinho),indício
+515239309,1,BB,2022/23,Custeio,BOVINOS,400838.32,601.0216023631477,0.0,311.2680586165571,307.6218720422745,0.9915617124929236,False,AT,True,gleba em outro CAR (não vizinho),indício
+513006810,1,BB,2021/22,Custeio,BOVINOS,1786972.86,54.2097694831382,0.0,259.2267108244527,256.3489539159707,0.9990639871766783,False,CA,False,gleba em outro CAR (não vizinho),indício
+517247737,1,BB,2023/24,Investimento,BOVINOS,1500000.0,93.0464653141489,0.0,228.00392944692604,225.73985805287347,0.7538750500410085,False,AT,True,gleba em outro CAR (não vizinho),indício
+515494521,1,BB,2022/23,Investimento,BOVINOS,499999.5,63.64022733560703,0.0,245.38341534996863,244.49478780927373,0.9686903227919721,False,AT,False,gleba em outro CAR (não vizinho),indício
+517254202,1,Demais,2023/24,Investimento,ADUBAÇÃO INTENSIVA DO SOLO,4996514.0,164.43977894418998,0.0,176.68835928503609,171.8148124289511,0.9984777567578325,False,AT,False,gleba em outro CAR (não vizinho),indício
+518300415,1,BB,2024/25,Investimento,"Implantação de tecnologias de energia renovável, ambiental e pequenas aplicações hidroenergéticas",463000.0,12.526803278840676,0.0,187.2906994306277,186.69255286889532,0.9999999999999999,False,AT,True,gleba em outro CAR (não vizinho),indício

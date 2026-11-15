@@ -1,0 +1,11 @@
+n,ref_bacen,nu_ordem,municipio_declarado,safra,finalidade,produto,banco,n_glebas,area_calc_ha,area_informada_ha,centroide_no_municipio,dentro_go
+1,512966202,1,Nova Glória,2021/22,Investimento,BOVINOS,BB,1,27.1,27.05,True,True
+2,515172973,1,Nova Crixás,2022/23,Custeio,BOVINOS,BB,1,395.6,394.98,True,True
+3,513730229,1,Campinaçu,2021/22,Custeio,BOVINOS,BB,1,20.3,20.19,True,True
+4,513654888,1,Nova Crixás,2021/22,Investimento,CORREÇÃO INTENSIVA DO SOLO,BB,2,164.0,163.77,True,True
+5,515752570,1,Paranaiguara,2022/23,Investimento,BOVINOS,BB,1,93.0,92.88,True,True
+6,515470763,1,Jaraguá,2022/23,Custeio,ABACAXI,BB,1,2.0,2.0,True,True
+7,516925197,1,Bela Vista de Goiás,2023/24,Investimento,CORREÇÃO INTENSIVA DO SOLO,BB,3,78.9,78.57,True,True
+8,518842929,1,Campo Alegre de Goiás,2024/25,Investimento,BOVINOS,BB,1,43.0,42.76,True,True
+9,518744713,1,Porangatu,2024/25,Custeio,BOVINOS,BB,1,16.1,16.02,True,True
+10,517318354,1,Nova Veneza,2023/24,Custeio,TOMATE,BB,1,0.4,0.44,True,True

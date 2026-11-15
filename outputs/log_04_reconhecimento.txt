@@ -1,0 +1,181 @@
+# Passo 0 — Reconhecimento (Sicor × Goiás, safras 2021/22–2024/25)
+
+## 1. Arquivos do Sicor disponíveis
+
+Fonte: <https://www.bcb.gov.br/estabilidadefinanceira/tabelas-credito-rural-proagro> (microdados em `/htms/sicor/DadosBrutos/`). Famílias de arquivo publicadas:
+
+`SICOR_COMPLEMENTO_COP`, `SICOR_COMPLEMENTO_OPERACAO_BASICA`, `SICOR_COMPLEMENTO_OPERACAO_BASICA_CONTRAT`, `SICOR_COMPLEMENTO_OPERACAO_BASICA_RENEGOCIACAO`, `SICOR_COMPLEMENTO_RCP`, `SICOR_COP_BASICO`, `SICOR_GLEBAS_CONTRAT`, `SICOR_LIBERACAO_RECURSOS`, `SICOR_LISTA_ALTERACAO_FONTE`, `SICOR_LISTA_COOPERADOS`, `SICOR_LISTA_IFS`, `SICOR_LISTA_RENEGOCIACAO`, `SICOR_MUTUARIOS`, `SICOR_MUTUARIOS_CONTRAT`, `SICOR_OPERACAO_BASICA_CONTRAT`, `SICOR_OPERACAO_BASICA_ESTADO`, `SICOR_OPERACAO_BASICA_RENEGOCIACAO`, `SICOR_PARCELAS_DESEMBOLSO`, `SICOR_PARCELAS_DESEMBOLSO_CONTRAT`, `SICOR_PARCELAS_PROAGRO`, `SICOR_PROPRIEDADES`, `SICOR_PROPRIEDADES_CONTRAT`, `SICOR_RCP_BASICO`, `SICOR_RCP_GLEBAS`, `SICOR_SALDOS`, `SICOR_SUMULA_JULGAMENTO`, `sicor_desclassificacao`, `sicor_glebas_wkt`
+
+Particionados por ano (2013–2026): `SICOR_OPERACAO_BASICA_ESTADO_AAAA`, `sicor_glebas_wkt_AAAA`, `SICOR_SALDOS_AAAA`. O ano do arquivo = ano de `DT_EMISSAO` (verificado). Usados aqui: operações e glebas 2021–2025, `SICOR_PROPRIEDADES`, `SICOR_COMPLEMENTO_OPERACAO_BASICA`, `SICOR_LISTA_IFS` e dicionários (`Empreendimento`, `Programa`).
+
+### Colunas reais (cabeçalho dos arquivos baixados)
+
+- **SICOR_OPERACAO_BASICA_ESTADO_2023.gz** (47): `REF_BACEN`, `NU_ORDEM`, `CNPJ_IF`, `DT_EMISSAO`, `DT_VENCIMENTO`, `CD_INST_CREDITO`, `CD_CATEG_EMITENTE`, `CD_FONTE_RECURSO`, `CNPJ_AGENTE_INVEST`, `CD_ESTADO`, `CD_REF_BACEN_INVESTIMENTO`, `CD_TIPO_SEGURO`, `CD_EMPREENDIMENTO`, `CD_PROGRAMA`, `CD_TIPO_ENCARG_FINANC`, `CD_TIPO_IRRIGACAO`, `CD_TIPO_AGRICULTURA`, `CD_FASE_CICLO_PRODUCAO`, `CD_TIPO_CULTIVO`, `CD_TIPO_INTGR_CONSOR`, `CD_TIPO_GRAO_SEMENTE`, `VL_ALIQ_PROAGRO`, `VL_JUROS`, `VL_PRESTACAO_INVESTIMENTO`, `VL_PREV_PROD`, `VL_QUANTIDADE`, `VL_RECEITA_BRUTA_ESPERADA`, `VL_PARC_CREDITO`, `VL_REC_PROPRIO`, `VL_PERC_RISCO_STN`, `VL_PERC_RISCO_FUNDO_CONST`, `VL_REC_PROPRIO_SRV`, `VL_AREA_FINANC`, `CD_SUBPROGRAMA`, `VL_PRODUTIV_OBTIDA`, `DT_FIM_COLHEITA`, `DT_FIM_PLANTIO`, `DT_INIC_COLHEITA`, `DT_INIC_PLANTIO`, `VL_JUROS_ENC_FINAN_POSFIX`, `VL_PERC_CUSTO_EFET_TOTAL`, `CD_CONTRATO_STN`, `CD_CNPJ_CADASTRANTE`, `VL_AREA_INFORMADA`, `CD_CICLO_CULTIVAR`, `CD_TIPO_SOLO`, `PC_BONUS_CAR`
+- **sicor_glebas_wkt_2023.gz** (4): `REF_BACEN`, `NU_ORDEM`, `NU_INDICE`, `GT_GEOMETRIA`
+- **SICOR_PROPRIEDADES.gz** (6): `REF_BACEN`, `NU_ORDEM`, `CD_CNPJ_CPF`, `CD_SNCR`, `CD_CIB`, `CD_CAR`
+- **SICOR_COMPLEMENTO_OPERACAO_BASICA.gz** (6): `REF_BACEN`, `NU_ORDEM`, `REF_BACEN_EFETIVO`, `AGENCIA_IF`, `CD_IBGE_MUNICIPIO`, `NUM_CEDULA_IF`
+- **SICOR_LISTA_IFS.csv** (3): `CNPJ_IF`, `NOME_IF`, `SEGMENTO_IF`
+- **Empreendimento.csv** (15): `CODIGO`, `DATA_INICIO`, `DATA_FIM`, `FINALIDADE`, `ATIVIDADE`, `MODALIDADE`, `PRODUTO`, `VARIEDADE`, `CESTA`, `ZONEAMENTO`, `UNIDADE_MEDIDA`, `UNIDADE_MEDIDA_PREVISAO`, `CONSORCIO`, `CEDULA_MAE`, `CD_TIPO_CULTURA`
+
+Chave de operação: (`REF_BACEN`, `NU_ORDEM`); `REF_BACEN` é mascarado. Gleba: + `NU_INDICE`. Município vem só do complemento (`CD_IBGE_MUNICIPIO`). Finalidade/produto vêm do dicionário `Empreendimento` via `CD_EMPREENDIMENTO`. Segundo o manual, `VL_AREA_FINANC = VL_AREA_INFORMADA × VL_PARC_CREDITO / (VL_PARC_CREDITO + VL_REC_PROPRIO)` — a área comparável com a gleba é `VL_AREA_INFORMADA`. `CD_CNPJ_CPF` de propriedades **não** foi carregado.
+
+## 2. Tamanho do recorte
+
+| safra   | finalidade   |   operacoes |   op_bb |   pct_bb |   valor_rs_bi |   valor_bb_rs_bi |
+|:--------|:-------------|------------:|--------:|---------:|--------------:|-----------------:|
+| 2021/22 | Custeio      |      39,158 |  31,232 |     79.8 |         16.61 |            10.14 |
+| 2021/22 | Investimento |      21,170 |  15,344 |     72.5 |          9.55 |             5.29 |
+| 2022/23 | Custeio      |      43,956 |  34,150 |     77.7 |         23.19 |            14.87 |
+| 2022/23 | Investimento |      16,919 |  11,659 |     68.9 |          9.08 |             4.79 |
+| 2023/24 | Custeio      |      44,946 |  35,855 |     79.8 |         23.47 |            15.82 |
+| 2023/24 | Investimento |      17,915 |  12,718 |     71   |          8.51 |             4.39 |
+| 2024/25 | Custeio      |      38,473 |  30,887 |     80.3 |         19.9  |            13.58 |
+| 2024/25 | Investimento |      17,747 |  13,695 |     77.2 |          7.76 |             5.04 | 
+
+**Total: 240,284 operações**, R$ 118.1 bi; BB = 185,540 (77.2%); 122 instituições. Sem município no complemento: 134,462; município fora de GO (apesar de `CD_ESTADO='GO'`): 0.
+
+Maiores instituições no recorte:
+
+| instituicao                    |       n |   pct |   valor_rs_bi |
+|:-------------------------------|--------:|------:|--------------:|
+| BCO DO BRASIL S.A.             | 185,540 |  77.2 |         73.94 |
+| CAIXA ECONOMICA FEDERAL        |  11,107 |   4.6 |         11.56 |
+| BCO BRADESCO S.A.              |  10,924 |   4.5 |          7.19 |
+| CCLA SUDOESTE GOIANO           |   4,625 |   1.9 |          3.68 |
+| BANCO COOPERATIVO SICREDI      |   2,176 |   0.9 |          0.93 |
+| BCO DE LAGE LANDEN BRASIL S.A. |   1,802 |   0.7 |          0.8  |
+| BANCO SICOOB S.A.              |   1,762 |   0.7 |          0.8  |
+| BCO SANTANDER (BRASIL) S.A.    |   1,643 |   0.7 |          2.2  | 
+
+## 3. Cobertura de localização (gleba) e de CAR
+
+| grupo                 |   operacoes |   pct_com_gleba |   pct_com_poligono |   pct_so_ponto |   pct_com_car |   pct_poligono_e_car |   pct_valor_com_gleba |
+|:----------------------|------------:|----------------:|-------------------:|---------------:|--------------:|---------------------:|----------------------:|
+| TOTAL                 |     240,284 |            34.4 |               34.4 |              0 |          43.5 |                 34.4 |                  19.9 |
+| Custeio               |     166,533 |            30.1 |               30.1 |              0 |          31   |                 30.1 |                  14.8 |
+| Investimento          |      73,751 |            44   |               44   |              0 |          71.8 |                 44   |                  32.1 |
+| BB                    |     185,540 |            39.6 |               39.6 |              0 |          49.6 |                 39.6 |                  24.5 |
+| Demais                |      54,744 |            16.6 |               16.6 |              0 |          23   |                 16.6 |                  12.3 |
+| 2021/22               |      60,328 |            41.6 |               41.6 |              0 |          55.4 |                 41.6 |                  22   |
+| 2022/23               |      60,875 |            31.7 |               31.7 |              0 |          40.6 |                 31.7 |                  17   |
+| 2023/24               |      62,861 |            25.2 |               25.2 |              0 |          31.5 |                 25.2 |                  15.9 |
+| 2024/25               |      56,220 |            39.7 |               39.7 |              0 |          47.5 |                 39.6 |                  26.1 |
+| Custeio / BB          |     132,124 |            33.9 |               33.9 |              0 |          35.1 |                 33.9 |                  17   |
+| Custeio / Demais      |      34,409 |            15.4 |               15.4 |              0 |          15.4 |                 15.4 |                  10.7 |
+| Investimento / BB     |      53,416 |            53.7 |               53.7 |              0 |          85.4 |                 53.7 |                  45.4 |
+| Investimento / Demais |      20,335 |            18.6 |               18.6 |              0 |          35.9 |                 18.6 |                  15.3 | 
+
+Glebas por operação: 0: 157,732, 1: 74,203, 2: 5,432, 3–5: 2,498, 6–10: 379, >10: 40
+
+CARs distintos por operação: 0: 135,660, 1: 100,693, 2: 2,770, 3: 709, 4: 272, 5+: 180
+
+Códigos CAR informados (linhas operação×CAR): 134,851. Formato no Sicor: **sem hífens**, `UF`+`IBGE7`+`HASH32` (41 caracteres) — 100.0% seguem esse padrão; prefixo `GO`: 100.0%; município embutido no CAR = município da operação (quando há município): 98.1%.
+
+### Quem tem localização publicada? (viés de seleção)
+
+Por porte do produtor:
+
+| grupo              |   operacoes |   pct_gleba |   pct_car |   pct_municipio |
+|:-------------------|------------:|------------:|----------:|----------------:|
+| 1 pequeno produtor |      74,652 |        56.3 |      67.4 |            68   |
+| 2 médio produtor   |      80,714 |        21.9 |      23.9 |            24.1 |
+| 3 grande produtor  |      84,918 |        26.8 |      41.2 |            41.9 | 
+
+Por programa:
+
+| grupo            |   operacoes |   pct_gleba |   pct_car |   pct_municipio |
+|:-----------------|------------:|------------:|----------:|----------------:|
+| Outros programas |       7,222 |        29.1 |      87.1 |            99.3 |
+| Pronaf           |      64,047 |        61.2 |      71.9 |            72.2 |
+| Pronamp          |      40,068 |        36.5 |      36.7 |            36.8 |
+| Sem programa     |     128,947 |        20.7 |      29.1 |            29.2 | 
+
+Por valor da operação:
+
+| grupo           |   operacoes |   pct_gleba |   pct_car |   pct_municipio |
+|:----------------|------------:|------------:|----------:|----------------:|
+| a) < 50 mil     |      38,393 |        49.7 |      67.4 |            67.9 |
+| b) 50–200 mil   |      78,735 |        42.8 |      50   |            50.3 |
+| c) 200 mil–1 mi |      91,764 |        27.5 |      35.3 |            35.9 |
+| d) 1–5 mi       |      30,218 |        14.6 |      22.5 |            23.2 |
+| e) > 5 mi       |       1,174 |        10.5 |      15.9 |            17   | 
+
+Por produto (10 maiores em nº de operações):
+
+| grupo                                                                    |   operacoes |   pct_gleba |   valor_rs_bi |
+|:-------------------------------------------------------------------------|------------:|------------:|--------------:|
+| Custeio · BOVINOS                                                        |     109,491 |        34.5 |         32.48 |
+| Custeio · SOJA                                                           |      34,962 |        19.8 |         32.88 |
+| Investimento · BOVINOS                                                   |      29,571 |        74.3 |          8.72 |
+| Custeio · MILHO                                                          |      15,841 |        22.4 |         11.63 |
+| Investimento · MÁQUINAS E IMPLEMENTOS                                    |      10,198 |         0.2 |          5.29 |
+| Investimento · Terraços, Porteiras, Mata-burros, Currais, Cochos, Cercas |       8,627 |        48.8 |          1.19 |
+| Investimento · TRATOR                                                    |       5,555 |         0.2 |          3.61 |
+| Investimento · COLHEITADEIRAS, COLHEDEIRAS E ARRANCADEIRAS               |       3,608 |         0   |          4.2  |
+| Investimento · CORREÇÃO INTENSIVA DO SOLO                                |       3,175 |        65   |          3.36 |
+| Investimento · PASTAGEM                                                  |       2,334 |        75.9 |          1.22 | 
+
+Gleba, CAR e município andam juntos: operações com gleba e sem CAR = 4; com CAR e sem gleba = 22,076 (sobretudo máquinas/investimentos sem área). Toda operação com gleba tem município no complemento. O BCB não documenta o critério de publicação; o padrão observado é que a localização aparece muito mais para pequenos produtores, Pronaf, pecuária e operações de menor valor. A família de arquivos `*_CONTRAT` (glebas como lista de pontos) cobre só contratos a partir de nov/2025 — fora do recorte — e não preenche essa lacuna.
+
+## 4. Formato e qualidade das glebas
+
+- Glebas no recorte: **97,077**. Tipo WKT: `POLYGON` 97,077
+- WKT não interpretável: 0; vazias: 0; **inválidas (antes de make_valid): 0 (0.00%)**
+- Vértices por gleba: mediana 15, p05 6, p95 64; glebas com ≤ 4 vértices (triângulo/ponto degenerado): 96
+- Coordenadas em graus decimais (lon lat), com Z = 0 (descartado). Assumido SIRGAS 2000 (EPSG:4674).
+
+### Sanidade das coordenadas (centroide da gleba)
+
+| categoria                                |   glebas |   pct |
+|:-----------------------------------------|---------:|------:|
+| dentro de GO                             |   97,072 | 99.99 |
+| fora de GO (outra localização no Brasil) |        5 |  0.01 | 
+
+Das glebas dentro de GO, **99.7%** têm o centroide no município declarado da operação (prévia — o cruzamento 3 refaz isso por área e com tolerância de borda).
+
+Área: soma das glebas ÷ `VL_AREA_INFORMADA` por operação — mediana 1.003, p01 1.00, p10 1.001, p90 1.006, p99 1.43; razão entre 0,8 e 1,25 em 98.6% das 82,542 operações; fora de [0,5; 2]: 614 (prévia do cruzamento 4).
+
+Área da gleba (ha): mediana 30.0, p95 240, máx 4,968.
+
+**Leitura:** área e município batem quase perfeitamente com a gleba. Isso indica que o Sicor valida esses campos contra o polígono na entrada (ou a área é derivada dele). Consequência: os cruzamentos 3 (fora do município) e 4 (área incoerente) devem disparar pouco e funcionar mais como controle de qualidade do que como detector.
+
+Glebas com centroide fora de GO:
+
+|   ref_bacen |   nu_ordem |   nu_indice | loc_cat                                  |   cent_x |   cent_y |   area_ha |   cd_ibge_municipio |
+|------------:|-----------:|------------:|:-----------------------------------------|---------:|---------:|----------:|--------------------:|
+|   513204099 |          1 |           1 | fora de GO (outra localização no Brasil) |    -47.5 |    -17.5 |     130   |             5205109 |
+|   514517378 |          1 |           0 | fora de GO (outra localização no Brasil) |    -46.2 |    -14.9 |     325.5 |             5220702 |
+|   515242690 |          1 |           2 | fora de GO (outra localização no Brasil) |    -51.5 |    -20.6 |    1031.4 |             5204409 |
+|   516779661 |          1 |           2 | fora de GO (outra localização no Brasil) |    -46.5 |    -15   |     255.3 |             5220702 |
+|   520174228 |          1 |           0 | fora de GO (outra localização no Brasil) |    -49.5 |    -13.2 |       8.2 |             5215256 | 
+
+## 5. Amostra visual (10 operações sorteadas)
+
+![10 glebas](maps/passo0_glebas_aleatorias.png)
+
+|   n |   nu_ordem | municipio_declarado      | safra   | finalidade   | produto   | banco   |   n_glebas |   area_calc_ha |   area_informada_ha | centroide_no_municipio   | dentro_go   |   ref_bacen |
+|----:|-----------:|:-------------------------|:--------|:-------------|:----------|:--------|-----------:|---------------:|--------------------:|:-------------------------|:------------|------------:|
+|   1 |          1 | Goiatuba                 | 2021/22 | Custeio      | BOVINOS   | BB      |          1 |           15   |                15   | True                     | True        |   512941715 |
+|   2 |          1 | Niquelândia              | 2022/23 | Investimento | PASTAGEM  | BB      |          1 |           15.2 |                15.2 | True                     | True        |   514820418 |
+|   3 |          1 | São Luís de Montes Belos | 2021/22 | Custeio      | BOVINOS   | BB      |          1 |           12.1 |                12.1 | True                     | True        |   513638484 |
+|   4 |          1 | Córrego do Ouro          | 2021/22 | Custeio      | BOVINOS   | BB      |          1 |           73.9 |                73.8 | True                     | True        |   513744552 |
+|   5 |          2 | Cavalcante               | 2022/23 | Investimento | BOVINOS   | BB      |          1 |          475.1 |               472.2 | True                     | True        |   515826876 |
+|   6 |          1 | Pirenópolis              | 2022/23 | Custeio      | BOVINOS   | BB      |          1 |           10.3 |                10.3 | True                     | True        |   515696251 |
+|   7 |          1 | Faina                    | 2023/24 | Investimento | BOVINOS   | BB      |          1 |           24.9 |                24.9 | True                     | True        |   516459743 |
+|   8 |          1 | Cavalcante               | 2024/25 | Custeio      | BOVINOS   | BB      |          1 |           32.5 |                32.3 | True                     | True        |   518958145 |
+|   9 |          3 | Itapuranga               | 2023/24 | Investimento | BOVINOS   | BB      |          1 |           37.6 |                37.5 | True                     | True        |   517692529 |
+|  10 |          1 | Orizona                  | 2023/24 | Investimento | BOVINOS   | BB      |          1 |           42.3 |                42.1 | True                     | True        |   517625399 |
+
+## 6. Camadas de cruzamento — o que foi possível baixar
+
+| base                                        | status                          |   feicoes_em_GO | obs                                                                                                                        |
+|:--------------------------------------------|:--------------------------------|----------------:|:---------------------------------------------------------------------------------------------------------------------------|
+| Malha municipal (IBGE 2024)                 | ok (geoftp IBGE)                |             246 | 246 municípios                                                                                                             |
+| Terras indígenas (FUNAI)                    | ok (WFS geoserver.funai.gov.br) |               7 | Avá-Canoeiro; Carretão I; Carretão II; Karajá de Aruanã I; Karajá de Aruanã III; Parque do                                 |
+| Unidades de conservação (MMA/CNUC 2025-08)  | ok (dados.mma.gov.br)           |             166 | Proteção Integral 25; APA 44; RPPN 86; outras US 11                                                                        |
+| Áreas embargadas (IBAMA, termos de embargo) | ok (dadosabertos.ibama.gov.br)  |            4720 | 1,679 com polígono, demais só ponto; 292 cancelados; arquivo traz nome/CPF — descartados na ingestão                       |
+| Massas d'água (ANA/SNIRH)                   | ok (ArcGIS REST snirh.gov.br)   |           34257 | envelope de GO; inclui açudes pequenos. Rios como linha (BHO) não baixados: sem área, não servem ao critério >10% da gleba |
+| CAR — polígonos dos imóveis (SICAR)         | **MANUAL**                      |                 | download por estado exige navegador (página com captcha) — ver instruções abaixo                                           | 
+
+**CAR de Goiás (manual):** acesse <https://consultapublica.car.gov.br/publico/estados/downloads>, escolha **Goiás**, tema **Área do Imóvel** (shapefile `AREA_IMOVEL`), preencha o captcha/e-mail e salve o .zip em `data/raw/car/` (qualquer nome). O código do SICAR tem hífens/pontos (`GO-5218003-XXXX.XXXX...`); será normalizado para o formato do Sicor (sem separadores).
+

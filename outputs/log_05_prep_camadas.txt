@@ -1,0 +1,19 @@
+[IBGE municípios GO] 246 feições; nulas/vazias 0; inválidas corrigidas 0
+[Sicor glebas] 97,077 feições; nulas/vazias 0; inválidas corrigidas 0
+op_footprint: 82,552 operações com gleba
+[SICAR área do imóvel GO] 246,211 feições; nulas/vazias 0; inválidas corrigidas 102
+  CAR: códigos repetidos (multipartes em linhas separadas): 1,351
+[FUNAI terras indígenas] 18 feições; nulas/vazias 0; inválidas corrigidas 0
+[CNUC unidades de conservação] 3,122 feições; nulas/vazias 1; inválidas corrigidas 3
+[ANA massas d'água] 34,257 feições; nulas/vazias 0; inválidas corrigidas 0
+  embargos com ponto fora da faixa plausível (descartados se sem polígono): 1,343
+[IBAMA embargos GO] 3,422 feições; nulas/vazias 0; inválidas corrigidas 0
+  embargos por tipo de geometria: {'ponto': 1743, 'poligono': 1679}
+                      camada  feicoes  nulas_ou_vazias  invalidas_corrigidas  descartadas  pct_invalidas
+          IBGE municípios GO      246                0                     0            0          0.000
+                Sicor glebas    97077                0                     0            0          0.000
+     SICAR área do imóvel GO   246211                0                   102            0          0.041
+      FUNAI terras indígenas       18                0                     0            0          0.000
+CNUC unidades de conservação     3122                1                     3            0          0.096
+           ANA massas d'água    34257                0                     0            0          0.000
+           IBAMA embargos GO     3422                0                     0            0          0.000

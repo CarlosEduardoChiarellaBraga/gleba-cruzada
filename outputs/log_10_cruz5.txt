@@ -1,0 +1,31 @@
+{'ops_recorte': 240284, 'elegiveis_base': 191840, 'com_municipio': 70715, 'municipio_do_complemento': 70715, 'municipio_so_do_car': 0, 'grupos_ge20': 1039, 'grupos_mad_zero': 20, 'ops_avaliaveis': 46872}
+                                                               cruzamento  elegiveis  disparam  pct_elegiveis  bb_pct  demais_pct
+0  5. Valor por unidade > mediana + 3·MAD (R$/ha lavoura; R$/UA pecuária)      46872      5147          10.98   10.23       18.28
+1                                                            5. — indício      46872      4583           9.78    9.09       16.47
+2                                          5. — erro de cadastro provável      46872       564           1.20    1.14        1.80
+3                                                   5. — indício em R$/ha       6343       488           7.69    6.14       13.97
+4                                                   5. — indício em R$/UA      24573      2369           9.64    8.56       18.17
+5                                               5. — indício em R$/cabeça      15956      1726          10.82   10.79       12.03
+6                                 5. (sensibilidade) MAD escalado ×1,4826      46872      3728           7.95    7.47       12.69
+7                  5. (regra literal) R$/ha para tudo, inclusive pecuária      52455      7355          14.02   12.90       24.71
+                                                   avaliaveis  disparam    pct
+finalidade   produto                    metrica                               
+Custeio      BOVINOS                    R$/cabeça       15910      1974  12.41
+                                        R$/UA           15144      1521  10.04
+Investimento BOVINOS                    R$/UA            9429      1148  12.18
+Custeio      SOJA                       R$/ha            3900       314   8.05
+             MILHO                      R$/ha            1786       126   7.05
+Investimento CORREÇÃO INTENSIVA DO SOLO R$/ha             439        33   7.52
+             PASTAGEM                   R$/ha             170        24  14.12
+Custeio      SUÍNOS                     R$/cabeça          46         6  13.04
+         banco    safra  produto  vl_parc_credito  vl_area_informada  vl_quantidade    metrica    base      valor_un   mediana  vezes_mediana  n_grupo
+186371  Demais  2022/23  BOVINOS       3000000.00             131.71          134.0      R$/UA   134.0  22388.059701  1909.130      11.726839       25
+107772      BB  2024/25  BOVINOS       2998103.68             239.77          418.2      R$/UA   418.2   7169.066667   573.100      12.509277       33
+152038  Demais  2021/22  BOVINOS       3000000.00             209.94          213.0      R$/UA   213.0  14084.507042  2530.460       5.565987      145
+108117      BB  2024/25  BOVINOS       3000000.00              47.78          285.0      R$/UA   285.0  10526.315789  1959.770       5.371200       54
+108371      BB  2024/25  BOVINOS       3000000.00              26.86          285.0      R$/UA   285.0  10526.315789  1959.770       5.371200       54
+25801       BB  2024/25  BOVINOS       2750000.00              47.78          225.0      R$/UA   225.0  12222.222222  1959.770       6.236560       54
+34044   Demais  2022/23  BOVINOS       2998140.00             244.00          244.0      R$/UA   244.0  12287.459016  2779.760       4.420331       42
+62972   Demais  2022/23  BOVINOS       3000000.00              49.91          485.0  R$/cabeça   485.0   6185.567010  1747.572       3.539521       53
+50418       BB  2024/25  BOVINOS       2397762.59             338.32          194.1      R$/UA   194.1  12353.233333  1981.070       6.235637       42
+4714        BB  2022/23  BOVINOS       3000000.00             354.74         2589.0      R$/UA  2589.0   1158.748552   416.810       2.780040       35

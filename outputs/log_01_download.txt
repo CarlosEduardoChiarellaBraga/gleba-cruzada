@@ -1,0 +1,27 @@
+[baixado] Atividade.csv 0.0 MB em 0s
+[baixado] CategoriaEmitente.csv 0.0 MB em 0s
+[baixado] SICOR_LISTA_IFS.csv 0.0 MB em 0s
+[baixado] Empreendimento.csv 0.7 MB em 2s
+[baixado] Finalidade.csv 0.0 MB em 0s
+[baixado] FonteRecursos.csv 0.0 MB em 0s
+[baixado] InstrumentoCredito.csv 0.0 MB em 0s
+[baixado] Modalidade.csv 0.0 MB em 0s
+[baixado] MunicipiosSicor.csv 0.2 MB em 0s
+[baixado] Produto.csv 0.0 MB em 0s
+[baixado] Programa.csv 0.0 MB em 0s
+[baixado] SituacaoOperacao.csv 0.0 MB em 0s
+[baixado] Subprogramas.csv 0.0 MB em 1s
+[baixado] manualDadosSicorCompleto.pdf 0.6 MB em 2s
+[baixado] SICOR_COMPLEMENTO_OPERACAO_BASICA.gz 453.3 MB em 134s
+[baixado] SICOR_OPERACAO_BASICA_ESTADO_2021.gz 58.2 MB em 17s
+[baixado] SICOR_OPERACAO_BASICA_ESTADO_2022.gz 60.7 MB em 18s
+[baixado] SICOR_OPERACAO_BASICA_ESTADO_2023.gz 65.0 MB em 19s
+[baixado] SICOR_OPERACAO_BASICA_ESTADO_2024.gz 68.2 MB em 20s
+[baixado] SICOR_OPERACAO_BASICA_ESTADO_2025.gz 64.8 MB em 18s
+[baixado] SICOR_PROPRIEDADES.gz 500.0 MB em 137s
+[baixado] sicor_glebas_wkt_2021.gz 205.5 MB em 60s
+[baixado] sicor_glebas_wkt_2022.gz 233.8 MB em 64s
+[baixado] sicor_glebas_wkt_2023.gz 271.4 MB em 75s
+[baixado] sicor_glebas_wkt_2024.gz 281.0 MB em 78s
+[baixado] sicor_glebas_wkt_2025.gz 266.9 MB em 77s
+download Sicor concluído

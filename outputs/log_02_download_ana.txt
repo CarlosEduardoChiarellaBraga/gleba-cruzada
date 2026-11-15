@@ -1,0 +1,7 @@
+== ana
+  massa_dagua_go.geojson: 34,257 IDs no envelope (contagem do servidor: 34,257)
+  massa_dagua_go.geojson: 500/34,257
+  massa_dagua_go.geojson: 10,500/34,257
+  massa_dagua_go.geojson: 20,500/34,257
+  massa_dagua_go.geojson: 30,500/34,257
+[baixado] massa_dagua_go.geojson: 34,257 feições

@@ -1,0 +1,11 @@
+cruzamento,elegiveis,disparam,pct_elegiveis,pct_recorte,valor_disparos_rs_mi,bb_elegiveis,bb_disparam,bb_pct,demais_elegiveis,demais_disparam,demais_pct
+"4. Área incoerente — qualquer sinal (razão <0,5 ou >2, ou área simbólica)",82552,1286,1.56,0.535,438.0,73470,1188,1.62,9082,98,1.08
+4. — indício,82552,291,0.35,0.121,96.9,73470,268,0.36,9082,23,0.25
+4. — erro de cadastro provável,82552,881,1.07,0.367,239.0,73470,808,1.1,9082,73,0.8
+4. — ruído provável,82552,114,0.14,0.047,102.1,73470,112,0.15,9082,2,0.02
+4. — erro de unidade provável,82552,76,0.09,0.032,41.9,73470,66,0.09,9082,10,0.11
+4. — gleba MAIOR que a área informada (>2×),82552,290,0.35,0.121,96.4,73470,267,0.36,9082,23,0.25
+"4. — gleba MENOR que a área informada (<0,5×)",82552,1,0.0,0.0,0.4,73470,1,0.0,9082,0,0.0
+4. — investimento sem área de referência (máquina/benfeitoria),82552,114,0.14,0.047,102.1,73470,112,0.15,9082,2,0.02
+"4. — área informada simbólica (≤ 0,1 ha)",82552,805,0.98,0.335,197.1,73470,742,1.01,9082,63,0.69
+"4. (sensibilidade) razão <0,8 ou >1,25",82552,1045,1.27,0.435,530.7,73470,903,1.23,9082,142,1.56
