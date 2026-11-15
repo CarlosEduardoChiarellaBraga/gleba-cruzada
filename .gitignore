@@ -1,0 +1,9 @@
+# dados (baixados de novo com `make download`; o CAR é download manual)
+data/
+# resultados: contêm IDs de operação, códigos de CAR e coordenadas — não publicar
+outputs/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+a.py
